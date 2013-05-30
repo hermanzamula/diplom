@@ -10,23 +10,58 @@ import org.eclipse.swt.custom.TableCursor;
 import org.eclipse.swt.events.*;
 import org.eclipse.swt.widgets.*;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.managehelper.ui.UiUtils.addSelectionListener;
+import static com.managehelper.ui.UiUtils.setCustomHeight;
+import static java.lang.Double.valueOf;
+
 public class TableFrame {
 
-    public static final SelectionAdapter CONTINUE_SELECTION = new SelectionAdapter() {
-        @Override
-        public void widgetSelected(SelectionEvent selectionEvent) {
-
-        }
-    };
     protected Shell shell;
     List<TeamBoard> tables = new ArrayList<TeamBoard>();
     //private List<Integer[][]> integers = new ArrayList<Integer[][]>();
 
     public TableFrame() {
+    }
+
+    public static void addMouseListener(final Table table, final TableCursor cursor, final ControlEditor editor) {
+        cursor.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseUp(MouseEvent e) {
+                final Text text = new Text(cursor, SWT.NONE);
+                TableItem row = cursor.getRow();
+                final int column = cursor.getColumn();
+                //If select diagonal item
+                if (column == 0 || row == table.getItem(column - 1)) {
+                    return;
+                }
+                row.getText(column);
+                text.setText(row.getText(column));
+                text.addKeyListener(new KeyAdapter() {
+                    public void keyPressed(KeyEvent e) {
+                        TableItem row = cursor.getRow();
+                        int column = cursor.getColumn();
+                        row.setText(column, text.getText());
+                        // close the text editor when the user hits "ESC"
+                        if (e.character == SWT.ESC) {
+                            text.dispose();
+                        }
+                    }
+                });
+                // close the text editor when the user clicks away
+                text.addFocusListener(new FocusAdapter() {
+                    public void focusLost(FocusEvent e) {
+                        final TableItem item = cursor.getRow();
+                        item.setText(column, text.getText());
+                        text.dispose();
+                    }
+                });
+                editor.setEditor(text);
+                text.setFocus();
+            }
+        });
     }
 
     public void open(ApplicationContext applicationContext) {
@@ -72,10 +107,13 @@ public class TableFrame {
             scrolledHolder.setExpandHorizontal(true);
             scrolledHolder.setExpandVertical(true);
 
+            Text cost = new Text(composite, SWT.BORDER);
+            cost.setBounds(114, 277, 76, 21);
+
             final Table table = createTable(numberOfParticipants, scrolledHolder);
             final Team team = new Team();
             team.setParticipants(applicationContext.getNumOfParticipants());
-            final TeamBoard board = new TeamBoard(team, table);
+            final TeamBoard board = new TeamBoard(team, table, cost);
             tables.add(board);
 
             createInfoLables(composite);
@@ -95,9 +133,9 @@ public class TableFrame {
             public void widgetSelected(SelectionEvent arg0) {
                 setAllValues(numberOfParticipants);
                 evaluateIndexes(applicationContext);
+                applicationContext.setUnfinishedState(false);
             }
         });
-
 
 
         evaluateBtn.setBounds(334, 373, 75, 25);
@@ -105,15 +143,27 @@ public class TableFrame {
 
         Button continueBtn = new Button(shell, SWT.NONE);
         continueBtn.setBounds(467, 373, 75, 25);
-        continueBtn.addSelectionListener(CONTINUE_SELECTION);
         continueBtn.setText("Продолжить");
+
+        continueBtn.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent selectionEvent) {
+                if (applicationContext.isUnfinishedState()) {
+                    return;
+                }
+                for(TeamBoard board: tables) {
+                    applicationContext.getTeams().add(board.getTeam());
+                }
+                shell.dispose();
+            }
+        });
 
     }
 
     private void evaluateIndexes(ApplicationContext applicationContext) {
-        for(TeamBoard board : tables) {
+        for (TeamBoard board : tables) {
             final TeamRateEvaluator evaluator = applicationContext.getEvaluator();
-            final int[][] values = board.getSimpleBoardValues();
+            final int[][] values = board.getBoardValues();
             final double unity = evaluator.evaluateGroupUnity(values, board.getTeam());
             final double index = evaluator.evaluateIndex(values, board.getTeam());
             final double plus = evaluator.evaluateMedianaMinus(values, board.getTeam());
@@ -146,17 +196,12 @@ public class TableFrame {
         Label lblCosts = new Label(composite, SWT.NONE);
         lblCosts.setBounds(21, 283, 55, 15);
         lblCosts.setText("Цена обучения группы");
-
-        final Text text = new Text(composite, SWT.BORDER);
-        text.setBounds(114, 277, 76, 21);
     }
 
     private Table createTable(int numberOfParticipants, ScrolledComposite scrolledHolder) {
         final Table table = new Table(scrolledHolder, SWT.BORDER | SWT.FULL_SELECTION);
         table.setLinesVisible(true);
         table.setHeaderVisible(true);
-
-        //final TableEditor editor = new TableEditor(table);
 
         final TableCursor cursor = new TableCursor(table, SWT.NONE);
         final ControlEditor editor = new ControlEditor(cursor);
@@ -190,122 +235,22 @@ public class TableFrame {
         return table;
     }
 
-    private void addMouseListener(final Table table, final TableCursor cursor, final ControlEditor editor) {
-        cursor.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseUp(MouseEvent e) {
-                final Text text = new Text(cursor, SWT.NONE);
-                TableItem row = cursor.getRow();
-                final int column = cursor.getColumn();
-                //If select diagonal item
-                if (column == 0 || row == table.getItem(column - 1)) {
-                    return;
-                }
-                row.getText(column);
-                text.setText(row.getText(column));
-                text.addKeyListener(new KeyAdapter() {
-                    public void keyPressed(KeyEvent e) {
-                        TableItem row = cursor.getRow();
-                        int column = cursor.getColumn();
-                        row.setText(column, text.getText());
-                        // close the text editor when the user hits "ESC"
-                        if (e.character == SWT.ESC) {
-                            text.dispose();
-                        }
-                    }
-                });
-                // close the text editor when the user clicks away
-                text.addFocusListener(new FocusAdapter() {
-                    public void focusLost(FocusEvent e) {
-                        final TableItem item = cursor.getRow();
-                        item.setText(column, text.getText());
-                        text.dispose();
-                    }
-                });
-                editor.setEditor(text);
-                text.setFocus();
-            }
-        });
-    }
-
-    private void addSelectionListener(final Table table, final TableCursor cursor, final ControlEditor editor) {
-        cursor.addSelectionListener(new SelectionAdapter() {
-            // when the TableEditor is over a cell, select the corresponding row in
-            // the table
-            public void widgetSelected(SelectionEvent e) {
-                table.setSelection(new TableItem[]{cursor.getRow()});
-            }
-
-            // when the user hits "ENTER" in the TableCursor, pop up a text editor so that
-            // they can change the text of the cell
-            public void widgetDefaultSelected(SelectionEvent e) {
-                final Text text = new Text(cursor, SWT.NONE);
-                TableItem row = cursor.getRow();
-                int column = cursor.getColumn();
-                text.setText(row.getText(column));
-                text.addKeyListener(new KeyAdapter() {
-                    public void keyPressed(KeyEvent e) {
-                        TableItem row = cursor.getRow();
-                        int column = cursor.getColumn();
-                        row.setText(column, text.getText());
-                        // close the text editor when the user hits "ESC"
-                        if (e.character == SWT.ESC) {
-                            text.dispose();
-                        }
-                    }
-                });
-                editor.setEditor(text);
-                text.setFocus();
-            }
-        });
-    }
-
-    //http://stackoverflow.com/questions/9465732/swt-custom-row-height-on-empty-tables-trees
-    private void setCustomHeight(Table table, int height) {
-        table.pack();
-        try {
-/*
- * Locate the method setItemHeight(int). Note that if you do not
- * have access to the method, you must use getDeclaredMethod(). If
- * setItemHeight(int) were public, you could simply call
- * getDeclaredMethod.
- */
-            Method setItemHeightMethod =
-                    table.getClass().getDeclaredMethod("setItemHeight", int.class);
-
-/*
- * Set the method as accessible. Again, this would not be necessary
- * if setItemHeight(int) were public.
- */
-            setItemHeightMethod.setAccessible(true);
-
-/*
- * Invoke the method. Equivalent to table.setItemHeight(50).
- */
-            setItemHeightMethod.invoke(table, height);
-        } catch (Exception e) {
-/*
- * Reflection failed, it's probably best to swallow the exception and
- * degrade gracefully, as if we never called setItemHeight.  Maybe
- * log the error or print the exception to stderr?
- */
-            e.printStackTrace();
-        }
-    }
-
     private void setAllValues(int numberOfParticipants) {
         for (TeamBoard board : tables) {
-            int index = board.getTable(). getTopIndex();
-            final Integer[][] ints = new Integer[numberOfParticipants][numberOfParticipants];
+            int index = board.getTable().getTopIndex();
+            final int[][] ints = new int[numberOfParticipants][numberOfParticipants];
             while (index < board.getTable().getItemCount()) {
                 final TableItem item = board.getTable().getItem(index);
                 for (int i = 1; i < board.getTable().getColumnCount(); i++) {
                     final String value = item.getText(i).trim();
                     //If value present, set value as marked
                     ints[index][i - 1] = value.length() > 0 && !value.equals("-") && !value.equals("0") ? 1 : 0;
+
                 }
                 index++;
             }
+            final String text = board.getCosts().getText();
+            board.getTeam().setCost(valueOf(text.isEmpty() ? "0" : text));
             board.setBoardValues(ints);
         }
     }
@@ -351,17 +296,17 @@ public class TableFrame {
     private class TeamBoard {
         private final Team team;
         private final Table table;
-
+        private final Text costs;
         Label index1Value;
         Label index2Value;
         Label index3Value;
         Label index4Value;
+        private int[][] boardValues;
 
-        private Integer[][] boardValues;
-
-        private TeamBoard(Team team, Table table) {
+        private TeamBoard(Team team, Table table, Text costs) {
             this.team = team;
             this.table = table;
+            this.costs = costs;
         }
 
         private Label getIndex1Value() {
@@ -404,20 +349,25 @@ public class TableFrame {
             return table;
         }
 
-        private Integer[][] getBoardValues() {
+        private int[][] getBoardValues() {
             return boardValues;
         }
 
-        private void setBoardValues(Integer[][] boardValues) {
+        private void setBoardValues(int[][] boardValues) {
             this.boardValues = boardValues;
         }
 
+        @Deprecated
         private int[][] getSimpleBoardValues() {
             int intArray[][] = new int[boardValues.length][boardValues[0].length];
-            for(int i = 0; i < intArray.length; i ++){
+            for (int i = 0; i < intArray.length; i++) {
                 for (int j = 0; j < intArray[0].length; j++) intArray[i][j] = boardValues[i][j];
             }
             return intArray;
+        }
+
+        private Text getCosts() {
+            return costs;
         }
     }
 
