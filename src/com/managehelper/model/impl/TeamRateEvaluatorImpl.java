@@ -1,21 +1,18 @@
 package com.managehelper.model.impl;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import sun.misc.Sort;
-
 import com.managehelper.model.Team;
 import com.managehelper.model.TeamRateEvaluator;
 
 public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
-	@Override
-	public double evaluateIndex(int[][] array, Team team) {
-		int n = team.getParticipants();
-		int VP = 0;
-        List<String> s = new ArrayList<String>();
+    @Override
+    public double evaluateIndex(int[][] array, Team team) {
+        int n = team.getParticipants();
+        if (n == 0) {
+            throw new IllegalArgumentException("Number of participants is null");
+        }
+
+        int VP = 0;
         for (int i = 0; i < n - 1; i++) {
             for (int j = i + 1; j < n; j++) {
                 if ((array[i][j] == array[j][i]) && (array[i][j] == 1)) {
@@ -23,89 +20,89 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
                 }
             }
         }
-        return VP / n * (n - 1);
-	}
+        return VP/(double) n* ((double)n - 1.d);
+    }
 
-	@Override
-	public double evaluateGroupUnity(int[][] array, Team team) {
+    @Override
+    public double evaluateGroupUnity(int[][] array, Team team) {
 
-		return 0;
-	}
+        return 0;
+    }
 
-	@Override
-	public double evaluateMedianaPlus(int[][] array, Team team) {
-		int resoult = 0;
-		int n = team.getParticipants();
-		int massiv[] = new int[n];
+    @Override
+    public double evaluateMedianaPlus(int[][] array, Team team) {
+        int resoult = 0;
+        int n = team.getParticipants();
+        int massiv[] = new int[n];
 
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n; j++) {
-				if (array[i][j] == 1) {
-					massiv[i] = +1;
-				}
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (array[i][j] == 1) {
+                    massiv[i] = +1;
+                }
 
-			}
-		}
-		sort(massiv);
-		if (n % 2 == 0) {
-			resoult = massiv[(massiv.length / 2) + 1];
+            }
+        }
+        sort(massiv);
+        if (n % 2 == 0) {
+            resoult = massiv[(massiv.length / 2) + 1];
 
-		} else {
-			resoult = massiv[(massiv.length + 1) / 2];
+        } else {
+            resoult = massiv[(massiv.length + 1) / 2];
 
-		}
-		return resoult;
-	}
+        }
+        return resoult;
+    }
 
-	@Override
-	public double evaluateMedianaMinus(int[][] array, Team team) {
+    @Override
+    public double evaluateMedianaMinus(int[][] array, Team team) {
 
-		int resoult = 0;
-		int n = team.getParticipants();
-		int massiv[] = new int[n];
+        int resoult = 0;
+        int n = team.getParticipants();
+        int massiv[] = new int[n];
 
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n; j++) {
-				if (array[i][j] == 0) {
-					massiv[i] = +1;
-				}
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (array[i][j] == 0) {
+                    massiv[i] = +1;
+                }
 
-			}
-		}
-		sort(massiv);
-		if (n % 2 == 0) {
-			resoult = massiv[(massiv.length / 2) + 1];
+            }
+        }
+        sort(massiv);
+        if (n % 2 == 0) {
+            resoult = massiv[(massiv.length / 2) + 1];
 
-		} else {
-			resoult = massiv[(massiv.length + 1) / 2];
+        } else {
+            resoult = massiv[(massiv.length + 1) / 2];
 
-		}
-		return resoult;
-	}
+        }
+        return resoult;
+    }
 
-	@Override
-	public double normalize(double min, double max, double current,
-			boolean isMax) {
-		return 0;
-	}
+    @Override
+    public double normalize(double min, double max, double current,
+                            boolean isMax) {
+        return 0;
+    }
 
-	@Override
-	public double evaluateTeamRate(Team team, double indexRate,
-			double unityRate, double plusRate, double minusRate) {
-		return 0;
-	}
+    @Override
+    public double evaluateTeamRate(Team team, double indexRate,
+                                   double unityRate, double plusRate, double minusRate) {
+        return 0;
+    }
 
-	public void sort(int[] mass) {
-		int tempo = 0;
-		for (int i = 0; i < mass.length - 1; i++) {
-			for (int j = i + 1; j < mass.length; j++) {
-				if (mass[i] > mass[j]) {
-					tempo = mass[j];
-					mass[j] = mass[i];
-					mass[i] = tempo;
-				}
-			}
-		}
+    public void sort(int[] mass) {
+        int tempo = 0;
+        for (int i = 0; i < mass.length - 1; i++) {
+            for (int j = i + 1; j < mass.length; j++) {
+                if (mass[i] > mass[j]) {
+                    tempo = mass[j];
+                    mass[j] = mass[i];
+                    mass[i] = tempo;
+                }
+            }
+        }
 
-	}
+    }
 }

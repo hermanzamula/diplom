@@ -21,7 +21,6 @@ public class FinalFrame extends Shell {
 
     protected Shell shell;
 
-
     /**
      * Create contents of the shell.
      */

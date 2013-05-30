@@ -73,7 +73,9 @@ public class TableFrame {
             scrolledHolder.setExpandVertical(true);
 
             final Table table = createTable(numberOfParticipants, scrolledHolder);
-            final TeamBoard board = new TeamBoard(new Team(), table);
+            final Team team = new Team();
+            team.setParticipants(applicationContext.getNumOfParticipants());
+            final TeamBoard board = new TeamBoard(team, table);
             tables.add(board);
 
             createInfoLables(composite);
