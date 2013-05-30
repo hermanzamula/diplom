@@ -82,7 +82,6 @@ public class TableFrame {
 
             createBoardLables(board, composite);
 
-
         }
 
         setDiagonalValues();
@@ -98,6 +97,8 @@ public class TableFrame {
                 evaluateIndexes(applicationContext);
             }
         });
+
+
 
         evaluateBtn.setBounds(334, 373, 75, 25);
         evaluateBtn.setText("Обработать");
@@ -144,9 +145,9 @@ public class TableFrame {
 
         Label lblCosts = new Label(composite, SWT.NONE);
         lblCosts.setBounds(21, 283, 55, 15);
-        lblCosts.setText("Costs");
+        lblCosts.setText("Цена обучения группы");
 
-        Text text = new Text(composite, SWT.BORDER);
+        final Text text = new Text(composite, SWT.BORDER);
         text.setBounds(114, 277, 76, 21);
     }
 
