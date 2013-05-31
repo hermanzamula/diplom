@@ -17,7 +17,7 @@ import static com.managehelper.ui.UiUtils.addSelectionListener;
 import static com.managehelper.ui.UiUtils.setCustomHeight;
 import static java.lang.Double.valueOf;
 
-public class TableFrame {
+public class TableFrame implements ManageFrame{
 
     protected Shell shell;
     List<TeamBoard> tables = new ArrayList<TeamBoard>();
@@ -64,6 +64,8 @@ public class TableFrame {
         });
     }
 
+
+    @Override
     public void open(ApplicationContext applicationContext) {
         Display display = Display.getDefault();
         shell = new Shell();

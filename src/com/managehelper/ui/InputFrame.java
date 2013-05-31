@@ -8,14 +8,14 @@ import org.eclipse.swt.widgets.*;
 
 import static java.lang.Integer.valueOf;
 
-public class InputFrame {
+public class InputFrame implements ManageFrame{
 
     protected Shell shell;
     private Text groupNumText;
     private Text participantNumText;
 
 
-
+    @Override
     public void open(final ApplicationContext context) {
         Display display = Display.getDefault();
         shell = new Shell();

@@ -3,17 +3,17 @@ package com.managehelper.ui;
 
 import com.managehelper.model.ApplicationContext;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainFrame {
-    /**
-     * Launch the application.
-     * @param args
-     */
 
 
     public static void main(String[] args) {
         try {
             final ApplicationContext context = new ApplicationContext();
             InputFrame window = new InputFrame();
+
             window.open(context);
             //TODO: сделать адекватную обработку закрытия окна
             if(context.isError()){
