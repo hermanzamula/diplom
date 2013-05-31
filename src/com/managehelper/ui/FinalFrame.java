@@ -140,7 +140,7 @@ public class FinalFrame  {
             tableItem.setText("" + (i + 1));
             tableItem.setText(1, "" + context.getTeams().get(i).getIndex());
             tableItem.setText(2, "" + context.getTeams().get(i).getMedianaPlus());
-            tableItem.setText(4, "" + context.getTeams().get(i).getMedianaMinus());
+            tableItem.setText(3, "" + context.getTeams().get(i).getMedianaMinus());
             tableItem.setText(4, "" + context.getTeams().get(i).getGroupUnity());
         }
     }

@@ -20,25 +20,28 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
                 }
             }
         }
-        return VP/(double) n* ((double)n - 1.d);
+
+        final double v = VP / (double) n * ((double) n - 1.d);
+        team.setIndex(v);
+        return v;
     }
 
     @Override
     public double evaluateGroupUnity(int[][] array, Team team) {
-
+        team.setGroupUnity(0);
         return 0;
     }
 
     @Override
     public double evaluateMedianaPlus(int[][] array, Team team) {
-        int resoult = 0;
+        int resoult;
         int n = team.getParticipants();
         int massiv[] = new int[n];
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (array[i][j] == 1) {
-                    massiv[i] = +1;
+                    massiv[i] += 1;
                 }
 
             }
@@ -51,6 +54,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
             resoult = massiv[(massiv.length + 1) / 2];
 
         }
+        team.setMedianaPlus(resoult);
         return resoult;
     }
 
@@ -64,7 +68,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (array[i][j] == 0) {
-                    massiv[i] = +1;
+                    massiv[i] += 1;
                 }
 
             }
@@ -77,6 +81,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
             resoult = massiv[(massiv.length + 1) / 2];
 
         }
+        team.setMedianaMinus(resoult);
         return resoult;
     }
 
