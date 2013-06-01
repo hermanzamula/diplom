@@ -175,18 +175,25 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
     }
 
     private void evaluateRaiting(ApplicationContext applicationContext) {
-        double array[][] = new double[tables.size()][4];
+        final double array[][] = new double[tables.size()][6];
         for (int i = 0; i < tables.size(); i++) {
             final Team team = tables.get(i).getTeam();
             array[i][0] = team.getIndex();
             array[i][1] = team.getGroupUnity();
             array[i][2] = team.getMedianaPlus();
             array[i][3] = team.getMedianaMinus();
+            array[i][4] = team.getCost();
         }
 
-        array = applicationContext.getEvaluator().normalize(array, true, applicationContext.getNumOfGroups());
+        applicationContext.getEvaluator().normalize(array, true, applicationContext.getNumOfGroups());
+
 
         final double[] rating = applicationContext.getEvaluator().evaluateRating(array, applicationContext.getNumOfGroups());
+
+        for(int i = 0; i < array.length; i ++){
+            array[i][5] = rating[i];
+        }
+
         applicationContext.setNormalized(array);
         for (int i = 0; i < rating.length; i++){
             final Team team = tables.get(i).getTeam();

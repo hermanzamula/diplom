@@ -153,7 +153,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     public double[] evaluateRating(double arrayBeforNormolize[][], int NumOfGroups) {
         double massiv[] = new double[NumOfGroups];
         for (int i = 0; i < NumOfGroups; i++) {
-            for (int j = 0; j < 4; j++) {
+            for (int j = 0; j < 5; j++) {
                 massiv[i] = massiv[i] + (1 - arrayBeforNormolize[i][j]);
             }
 
