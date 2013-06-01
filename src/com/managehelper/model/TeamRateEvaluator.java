@@ -1,8 +1,6 @@
 package com.managehelper.model;
 
 
-import java.util.List;
-
 public interface TeamRateEvaluator {
     double evaluateIndex(int array[][], Team team);
 
@@ -12,7 +10,10 @@ public interface TeamRateEvaluator {
 
     double evaluateMedianaMinus(int array[][], Team team);
 
-    double normalize(double min, double max, double current, boolean isMax);
+    double[][] normalize(double array[][], boolean isMax, int NumOfGroups);
 
-    double evaluateTeamRate(Team team, double indexRate, double unityRate, double plusRate, double minusRate);
+    double[] evaluateRating(double arrayBeforNormolize[][], int NumOfGroups);
+
+    double[] evaluateTeamRate(int NumOfGroups, double arrayAfterNormolize[][], double indexRate, double unityRate, double plusRate, double minusRate, double ratingRate);
+
 }

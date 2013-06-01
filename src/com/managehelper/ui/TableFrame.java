@@ -17,7 +17,7 @@ import static com.managehelper.ui.UiUtils.addSelectionListener;
 import static com.managehelper.ui.UiUtils.setCustomHeight;
 import static java.lang.Double.valueOf;
 
-public class TableFrame implements ManageFrame{
+public class TableFrame implements ManageFrame<ApplicationContext> {
 
     protected Shell shell;
     List<TeamBoard> tables = new ArrayList<TeamBoard>();
@@ -64,7 +64,6 @@ public class TableFrame implements ManageFrame{
         });
     }
 
-
     @Override
     public void open(ApplicationContext applicationContext) {
         Display display = Display.getDefault();
@@ -83,6 +82,11 @@ public class TableFrame implements ManageFrame{
                 display.sleep();
             }
         }
+    }
+
+    @Override
+    public void close() {
+        shell.dispose();
     }
 
     protected void createContents(final ApplicationContext applicationContext) {
@@ -153,10 +157,10 @@ public class TableFrame implements ManageFrame{
                 if (applicationContext.isUnfinishedState()) {
                     return;
                 }
-                for(TeamBoard board: tables) {
+                for (TeamBoard board : tables) {
                     applicationContext.getTeams().add(board.getTeam());
                 }
-                shell.dispose();
+                applicationContext.getManager().next(applicationContext);
             }
         });
 

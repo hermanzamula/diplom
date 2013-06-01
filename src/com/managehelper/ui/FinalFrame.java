@@ -17,7 +17,7 @@ import org.eclipse.swt.widgets.Label;
 import static com.managehelper.ui.UiUtils.addEditableListeners;
 
 
-public class FinalFrame  implements ManageFrame{
+public class FinalFrame  implements ManageFrame<ApplicationContext>{
 
 
     protected Shell shell;
@@ -190,5 +190,10 @@ public class FinalFrame  implements ManageFrame{
             }
         }
 
+    }
+
+    @Override
+    public void close() {
+        shell.dispose();
     }
 }

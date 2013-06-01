@@ -8,12 +8,11 @@ import org.eclipse.swt.widgets.*;
 
 import static java.lang.Integer.valueOf;
 
-public class InputFrame implements ManageFrame{
+public class InputFrame implements ManageFrame<ApplicationContext>{
 
     protected Shell shell;
     private Text groupNumText;
     private Text participantNumText;
-
 
     @Override
     public void open(final ApplicationContext context) {
@@ -34,6 +33,11 @@ public class InputFrame implements ManageFrame{
                 display.sleep();
             }
         }
+    }
+
+    @Override
+    public void close() {
+        shell.dispose();
     }
 
     /**
@@ -66,7 +70,7 @@ public class InputFrame implements ManageFrame{
                 }
                 context.setNumOfGroups(valueOf(groupNumText.getText()));
                 context.setNumOfParticipants(valueOf(participantNumText.getText()));
-                shell.dispose();
+                context.getManager().next(context);
             }
         });
 
