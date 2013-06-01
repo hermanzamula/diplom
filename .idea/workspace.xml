@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9db7a644-0405-430d-a115-6fa8e95205c5" name="Default" comment="">
+    <list default="true" id="9db7a644-0405-430d-a115-6fa8e95205c5" name="Default" comment="Fix ++">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java" afterPath="$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="diplom.iws" />
@@ -21,12 +22,12 @@
     <file path="/main.js" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778015694" ignored="false" />
     <file path="/index.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778177601" ignored="false" />
     <file path="$PROJECT_DIR$/../YoursTaxi/web/src/main/webapp/pages/index.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778626000" ignored="false" />
-    <file path="/Dummy.txt" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370099616163" ignored="false" />
+    <file path="/Dummy.txt" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370099633196" ignored="false" />
     <file path="/DriverReader.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778559252" ignored="false" />
     <file path="$PROJECT_DIR$/../YoursTaxi/model/src/main/java/com/taxiservice/model/reader/DriverReader.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778590867" ignored="false" />
     <file path="/Team.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369809876061" ignored="false" />
     <file path="/TeamRateEvaluator.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369809570943" ignored="false" />
-    <file path="/TeamRateEvaluatorImpl.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370099314701" ignored="false" />
+    <file path="/TeamRateEvaluatorImpl.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370100161036" ignored="false" />
     <file path="/FinalFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370098950338" ignored="false" />
     <file path="/TableFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370098644299" ignored="false" />
     <file path="/ApplicationContext.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370098567729" ignored="false" />
@@ -109,7 +110,23 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/managehelper/ui/FinalFrame.java" line="144" class="com.managehelper.ui.FinalFrame" package="com.managehelper.ui">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -141,24 +158,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrameManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/FrameManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InputFrame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/InputFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="36" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TableFrame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/TableFrame.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -170,19 +169,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FinalFrame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/FinalFrame.java">
+      <file leaf-file-name="Team.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/Team.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="50" selection-start="1916" selection-end="1916" vertical-scroll-proportion="0.0">
+            <state line="2" column="14" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CloseListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/CloseListener.java">
+      <file leaf-file-name="FinalFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/FinalFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="25" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
+            <state line="144" column="0" selection-start="5136" selection-end="5204" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -191,14 +190,9 @@
       <file leaf-file-name="TeamRateEvaluatorImpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="79" selection-start="4217" selection-end="4217" vertical-scroll-proportion="0.42413163">
+            <state line="160" column="40" selection-start="4685" selection-end="4685" vertical-scroll-proportion="0.29310346">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#evaluateIndex#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
-                <element signature="method#evaluateGroupUnity#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
-                <element signature="method#evaluateMedianaPlus#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
-                <element signature="method#evaluateMedianaMinus#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
-                <element signature="method#normalize#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -208,6 +202,24 @@
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/TeamRateEvaluator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="3" column="17" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UiUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/UiUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="120" column="27" selection-start="4818" selection-end="4818" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/managehelper/old/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -684,7 +696,11 @@
       <created>1370099620825</created>
       <updated>1370099620825</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix ++">
+      <created>1370099631577</created>
+      <updated>1370099631577</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -730,8 +746,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29393938" sideWeight="0.6700337" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43265992" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29393938" sideWeight="0.5673401" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43265992" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="432" y="305" width="501" height="280" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -811,28 +827,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/old/finalFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/swt.jar!/org/eclipse/swt/widgets/Table.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="296" column="16" selection-start="11378" selection-end="11378" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/UiUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="33" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/Team.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="27" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -891,22 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/TableFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="0" selection-start="6100" selection-end="6100" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#753#764#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/FinalFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="50" selection-start="1916" selection-end="1916" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="3" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
@@ -921,16 +902,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/old/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/UiUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="27" selection-start="4818" selection-end="4818" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/TableFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="0" selection-start="6100" selection-end="6100" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#753#764#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/FinalFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="0" selection-start="5136" selection-end="5204" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/Team.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="14" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="79" selection-start="4217" selection-end="4217" vertical-scroll-proportion="0.42413163">
+        <state line="160" column="40" selection-start="4685" selection-end="4685" vertical-scroll-proportion="0.29310346">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#evaluateIndex#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
-            <element signature="method#evaluateGroupUnity#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
-            <element signature="method#evaluateMedianaPlus#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
-            <element signature="method#evaluateMedianaMinus#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
-            <element signature="method#normalize#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>

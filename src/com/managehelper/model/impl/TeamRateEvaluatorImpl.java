@@ -20,7 +20,9 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
                 }
             }
         }
-        return VP / (double) n * ((double) n - 1.d);
+        final double v = VP / (double) n * ((double) n - 1.d);
+        team.setIndex(v);
+        return v;
     }
 
     @Override
@@ -42,7 +44,9 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
                 }
             }
         }
-        return (VP - VO) / (double) n * ((double) n - 1.d);
+        final double v = (VP - VO) / (double) n * ((double) n - 1.d);
+        team.setGroupUnity(v);
+        return v;
     }
 
     @Override
@@ -70,6 +74,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
             result = massiv[(massiv.length + 1) / 2];
 
         }
+        team.setMedianaPlus(result);
         return result;
     }
 
@@ -99,18 +104,18 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
             resoult = massiv[(massiv.length + 1) / 2];
 
         }
+        team.setMedianaMinus(resoult);
         return resoult;
     }
 
     @Override
     public double[][] normalize(double array[][], boolean isMax, int NumOfGroups) {
-        int n = NumOfGroups;
         double best;
         double worst;
         double max = array[0][0];
         double min = array[0][0];
         for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < NumOfGroups; j++) {
                 if (array[j][i] < min) {
                     min = array[j][i];
                 }
@@ -123,7 +128,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
             // тут нужно будет указать, best,worst под соответствующее условие;
 
 
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < NumOfGroups; j++) {
                 array[j][i] = norm(best, worst, array[j][i]);
             }
         }
@@ -133,10 +138,9 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     @Override
     public double[] evaluateTeamRate(int NumOfGroups, double arrayAfterNormolize[][], double indexRate,
                                      double unityRate, double plusRate, double minusRate, double ratingRate) {
-        int n = NumOfGroups;
         double kof = 0;
-        double massiv[] = new double[n];
-        for (int i = 0; i < n; i++) {
+        double massiv[] = new double[NumOfGroups];
+        for (int i = 0; i < NumOfGroups; i++) {
             for (int j = 0; j < 5; j++) {
                 if (j == 0) {
                     kof = indexRate;
@@ -162,7 +166,6 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     }
 
     public double[] evaluateRating(double arrayBeforNormolize[][], int NumOfGroups) {
-        double sum = 0;
         double massiv[] = new double[NumOfGroups];
         for (int i = 0; i < NumOfGroups; i++) {
             for (int j = 0; j < 4; j++) {
@@ -187,7 +190,6 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
                 }
             }
         }
-
     }
 
     private double norm(double best, double worst, double current) {
