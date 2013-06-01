@@ -54,19 +54,23 @@ public class FinalFrame  implements ManageFrame<ApplicationContext>{
         btnEvalute.setBounds(499, 370, 75, 25);
         btnEvalute.setText("Вычислить");
 
-        btnEvalute.addSelectionListener(new SelectionAdapter() {
+        btnEvalute.addSelectionListener(onEvaluatePress(context));
+
+        createBestGroupTable();
+
+    }
+
+    private SelectionAdapter onEvaluatePress(final ApplicationContext context) {
+        return new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent selectionEvent) {
                 final TableItem item = coefRate.getItem(0);
                 for(int i = 0; i < coefRate.getColumnCount(); i ++){
-                    context.getWeights()[i] = Double.valueOf(item.getText(i).trim());
+                    final String text = item.getText(i).trim();
+                    context.getWeights()[i] = Double.valueOf(text.isEmpty()?"0":text);
                 }
-
             }
-        });
-
-        createBestGroupTable();
-
+        };
     }
 
     private void createBestGroupTable() {

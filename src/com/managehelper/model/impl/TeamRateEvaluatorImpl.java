@@ -16,7 +16,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         for (int i = 0; i < n - 1; i++) {
             for (int j = i + 1; j < n; j++) {
                 if ((array[i][j] == array[j][i]) && (array[i][j] == 1)) {
-                    VP = +1;
+                    VP++;
                 }
             }
         }
@@ -35,10 +35,10 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         for (int i = 0; i < n - 1; i++) {
             for (int j = i + 1; j < n; j++) {
                 if ((array[i][j] == array[j][i]) && (array[i][j] == 1)) {
-                    VP = +1;
+                    VP++;
                 }
                 if ((array[i][j] == array[j][i]) && (array[i][j] == 0)) {
-                    VO = +1;
+                    VO++;
                 }
             }
         }
@@ -46,8 +46,8 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     }
 
     @Override
-    public double evaluateMedianaPlus(int[][] array, Team team) {
-        int resoult = 0;
+    public int evaluateMedianaPlus(int[][] array, Team team) {
+        int result = 0;
         int n = team.getParticipants();
         if (n == 0) {
             throw new IllegalArgumentException("Number of participants is null");
@@ -57,24 +57,24 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (array[i][j] == 1) {
-                    massiv[i] = +1;
+                    massiv[i]++;
                 }
 
             }
         }
         sort(massiv);
         if (n % 2 == 0) {
-            resoult = massiv[(massiv.length / 2) + 1];
+            result = massiv[(massiv.length / 2) + 1];
 
         } else {
-            resoult = massiv[(massiv.length + 1) / 2];
+            result = massiv[(massiv.length + 1) / 2];
 
         }
-        return resoult;
+        return result;
     }
 
     @Override
-    public double evaluateMedianaMinus(int[][] array, Team team) {
+    public int evaluateMedianaMinus(int[][] array, Team team) {
 
         int resoult = 0;
         int n = team.getParticipants();
@@ -86,7 +86,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (array[i][j] == 0) {
-                    massiv[i] = +1;
+                    massiv[i]++;
                 }
 
             }
@@ -124,7 +124,6 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
 
             for (int j = 0; j < n; j++) {
-
                 array[j][i] = norm(best, worst, array[j][i]);
             }
         }
@@ -163,10 +162,9 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     }
 
     public double[] evaluateRating(double arrayBeforNormolize[][], int NumOfGroups) {
-        int n = NumOfGroups;
         double sum = 0;
-        double massiv[] = new double[n];
-        for (int i = 0; i < n; i++) {
+        double massiv[] = new double[NumOfGroups];
+        for (int i = 0; i < NumOfGroups; i++) {
             for (int j = 0; j < 4; j++) {
                 massiv[i] = massiv[i] + (1 - arrayBeforNormolize[i][j]);
             }
@@ -178,7 +176,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         return massiv;
     }
 
-    public void sort(int[] mass) {
+    private void sort(int[] mass) {
         int tempo = 0;
         for (int i = 0; i < mass.length - 1; i++) {
             for (int j = i + 1; j < mass.length; j++) {
@@ -192,9 +190,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
     }
 
-    public double norm(double best, double worst, double current) {
-
+    private double norm(double best, double worst, double current) {
         return (current - worst) / (best - worst);
-
     }
 }

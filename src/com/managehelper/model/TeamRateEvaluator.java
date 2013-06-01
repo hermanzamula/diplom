@@ -6,9 +6,9 @@ public interface TeamRateEvaluator {
 
     double evaluateGroupUnity(int array[][], Team team);
 
-    double evaluateMedianaPlus(int array[][], Team team);
+    int evaluateMedianaPlus(int array[][], Team team);
 
-    double evaluateMedianaMinus(int array[][], Team team);
+    int evaluateMedianaMinus(int array[][], Team team);
 
     double[][] normalize(double array[][], boolean isMax, int NumOfGroups);
 
