@@ -13,7 +13,7 @@ public class CloseListener implements Listener {
     private Shell shell;
     private ApplicationContext context;
 
-    CloseListener(Shell shell, ApplicationContext context) {
+    public CloseListener(Shell shell, ApplicationContext context) {
         this.shell = shell;
         this.context = context;
     }

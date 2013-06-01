@@ -1,8 +1,10 @@
-package com.managehelper.ui;
+package com.managehelper.ui.frames;
 
 import com.managehelper.model.ApplicationContext;
 import com.managehelper.model.Team;
 import com.managehelper.model.TeamRateEvaluator;
+import com.managehelper.ui.CloseListener;
+import com.managehelper.ui.ManageFrame;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.ControlEditor;
 import org.eclipse.swt.custom.ScrolledComposite;
@@ -67,6 +69,10 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
     @Override
     public void open(ApplicationContext applicationContext) {
         Display display = Display.getDefault();
+        if(shell != null) {
+            shell.setVisible(true);
+            return;
+        }
         shell = new Shell();
         shell.setSize(600, 447);
         shell.setText("");
@@ -114,7 +120,7 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
             scrolledHolder.setExpandVertical(true);
 
             Text cost = new Text(composite, SWT.BORDER);
-            cost.setBounds(114, 277, 76, 21);
+            cost.setBounds(170, 282, 76, 21);
 
             final Table table = createTable(numberOfParticipants, scrolledHolder);
             final Team team = new Team();
@@ -139,6 +145,8 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
             public void widgetSelected(SelectionEvent arg0) {
                 setAllValues(numberOfParticipants);
                 evaluateIndexes(applicationContext);
+                evaluateRaiting(applicationContext);
+
                 applicationContext.setUnfinishedState(false);
             }
         });
@@ -166,12 +174,32 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
 
     }
 
+    private void evaluateRaiting(ApplicationContext applicationContext) {
+        double array[][] = new double[tables.size()][4];
+        for (int i = 0; i < tables.size(); i++) {
+            final Team team = tables.get(i).getTeam();
+            array[i][0] = team.getIndex();
+            array[i][1] = team.getGroupUnity();
+            array[i][2] = team.getMedianaPlus();
+            array[i][3] = team.getMedianaMinus();
+        }
+
+        array = applicationContext.getEvaluator().normalize(array, true, applicationContext.getNumOfGroups());
+
+        final double[] rating = applicationContext.getEvaluator().evaluateRating(array, applicationContext.getNumOfGroups());
+        applicationContext.setNormalized(array);
+        for (int i = 0; i < rating.length; i++){
+            final Team team = tables.get(i).getTeam();
+            team.setRating(rating[i]);
+        }
+    }
+
     private void evaluateIndexes(ApplicationContext applicationContext) {
         for (TeamBoard board : tables) {
             final TeamRateEvaluator evaluator = applicationContext.getEvaluator();
             final int[][] values = board.getBoardValues();
-            final double unity = evaluator.evaluateGroupUnity(values, board.getTeam());
             final double index = evaluator.evaluateIndex(values, board.getTeam());
+            final double unity = evaluator.evaluateGroupUnity(values, board.getTeam());
             final double plus = evaluator.evaluateMedianaMinus(values, board.getTeam());
             final double minus = evaluator.evaluateMedianaPlus(values, board.getTeam());
 
@@ -185,22 +213,22 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
     private void createInfoLables(Composite composite) {
         Label index1 = new Label(composite, SWT.NONE);
         index1.setBounds(386, 10, 55, 15);
-        index1.setText("index1: ");
+        index1.setText("A: ");
 
         Label index2 = new Label(composite, SWT.NONE);
         index2.setBounds(386, 75, 55, 15);
-        index2.setText("index2: ");
+        index2.setText("I (group): ");
 
         Label index3 = new Label(composite, SWT.NONE);
         index3.setBounds(447, 10, 55, 15);
-        index3.setText("index3: ");
+        index3.setText("Ms+: ");
 
         Label index4 = new Label(composite, SWT.NONE);
         index4.setBounds(447, 75, 55, 15);
-        index4.setText("index4: ");
+        index4.setText("Ms-: ");
 
         Label lblCosts = new Label(composite, SWT.NONE);
-        lblCosts.setBounds(21, 283, 55, 15);
+        lblCosts.setBounds(21, 283, 150, 15);
         lblCosts.setText("Цена обучения группы");
     }
 

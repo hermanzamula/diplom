@@ -1,6 +1,8 @@
-package com.managehelper.ui;
+package com.managehelper.ui.frames;
 
 import com.managehelper.model.ApplicationContext;
+import com.managehelper.ui.CloseListener;
+import com.managehelper.ui.ManageFrame;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -8,7 +10,7 @@ import org.eclipse.swt.widgets.*;
 
 import static java.lang.Integer.valueOf;
 
-public class InputFrame implements ManageFrame<ApplicationContext>{
+public class InputFrame implements ManageFrame<ApplicationContext> {
 
     protected Shell shell;
     private Text groupNumText;
@@ -17,6 +19,10 @@ public class InputFrame implements ManageFrame<ApplicationContext>{
     @Override
     public void open(final ApplicationContext context) {
         Display display = Display.getDefault();
+        if(shell != null){
+            shell.setVisible(true);
+            return;
+        }
         shell = new Shell();
         shell.setSize(450, 300);
         shell.setText("");

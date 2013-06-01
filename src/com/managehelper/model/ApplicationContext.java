@@ -10,7 +10,10 @@ import java.util.List;
 public class ApplicationContext {
 
     private final List<Team> teams = new ArrayList<Team>();
-    private final double weights[] = new double[5];
+    private final double weights[] = new double[6];
+
+    private double normalized [][];
+
     int numOfGroups = 0;
     int numOfParticipants = 0;
     private TeamRateEvaluator evaluator = new TeamRateEvaluatorImpl();
@@ -65,5 +68,13 @@ public class ApplicationContext {
 
     public FrameManager<ApplicationContext> getManager() {
         return manager;
+    }
+
+    public double[][] getNormalized() {
+        return normalized;
+    }
+
+    public void setNormalized(double[][] normalized) {
+        this.normalized = normalized;
     }
 }

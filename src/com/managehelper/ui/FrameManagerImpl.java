@@ -1,6 +1,9 @@
 package com.managehelper.ui;
 
 import com.managehelper.model.ApplicationContext;
+import com.managehelper.ui.frames.FinalFrame;
+import com.managehelper.ui.frames.InputFrame;
+import com.managehelper.ui.frames.TableFrame;
 
 import java.util.ArrayList;
 import java.util.List;

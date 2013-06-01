@@ -14,6 +14,6 @@ public interface TeamRateEvaluator {
 
     double[] evaluateRating(double arrayBeforNormolize[][], int NumOfGroups);
 
-    double[] evaluateTeamRate(int NumOfGroups, double arrayAfterNormolize[][], double indexRate, double unityRate, double plusRate, double minusRate, double ratingRate);
+    double[] evaluateTeamRate(int NumOfGroups, double arrayAfterNormolize[][], double weights[]);
 
 }

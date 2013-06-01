@@ -114,7 +114,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         double worst;
         double max = array[0][0];
         double min = array[0][0];
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             for (int j = 0; j < NumOfGroups; j++) {
                 if (array[j][i] < min) {
                     min = array[j][i];
@@ -136,28 +136,12 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     }
 
     @Override
-    public double[] evaluateTeamRate(int NumOfGroups, double arrayAfterNormolize[][], double indexRate,
-                                     double unityRate, double plusRate, double minusRate, double ratingRate) {
+    public double[] evaluateTeamRate(int NumOfGroups, double arrayAfterNormolize[][], double weights[]) {
         double kof = 0;
         double massiv[] = new double[NumOfGroups];
         for (int i = 0; i < NumOfGroups; i++) {
-            for (int j = 0; j < 5; j++) {
-                if (j == 0) {
-                    kof = indexRate;
-                }
-                if (j == 1) {
-                    kof = unityRate;
-                }
-                if (j == 2) {
-                    kof = plusRate;
-                }
-                if (j == 3) {
-                    kof = minusRate;
-                }
-                if (j == 4) {
-                    kof = ratingRate;
-                }
-
+            for (int j = 0; j < 6; j++) {
+                kof = weights[j];
                 massiv[i] = massiv[i] + (kof * arrayAfterNormolize[i][j]);
             }
 
@@ -165,6 +149,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         return massiv;
     }
 
+    @Override
     public double[] evaluateRating(double arrayBeforNormolize[][], int NumOfGroups) {
         double massiv[] = new double[NumOfGroups];
         for (int i = 0; i < NumOfGroups; i++) {
@@ -180,7 +165,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     }
 
     private void sort(int[] mass) {
-        int tempo = 0;
+        int tempo;
         for (int i = 0; i < mass.length - 1; i++) {
             for (int j = i + 1; j < mass.length; j++) {
                 if (mass[i] > mass[j]) {

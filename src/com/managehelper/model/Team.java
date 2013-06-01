@@ -10,6 +10,8 @@ package com.managehelper.model;
      private double medianaMinus;
      private double groupUnity;
 
+     private double rating;
+
      public double getIndex() {
          return index;
      }
@@ -56,5 +58,13 @@ package com.managehelper.model;
 
      public void setParticipants(int participants) {
          this.participants = participants;
+     }
+
+     public double getRating() {
+         return rating;
+     }
+
+     public void setRating(double rating) {
+         this.rating = rating;
      }
  }
