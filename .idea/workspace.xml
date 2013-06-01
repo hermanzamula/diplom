@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9db7a644-0405-430d-a115-6fa8e95205c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/ui/FinalFrame.java" afterPath="$PROJECT_DIR$/src/com/managehelper/ui/FinalFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/model/TeamRateEvaluator.java" afterPath="$PROJECT_DIR$/src/com/managehelper/model/TeamRateEvaluator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java" afterPath="$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="diplom.iws" />
@@ -24,7 +21,7 @@
     <file path="/main.js" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778015694" ignored="false" />
     <file path="/index.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778177601" ignored="false" />
     <file path="$PROJECT_DIR$/../YoursTaxi/web/src/main/webapp/pages/index.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778626000" ignored="false" />
-    <file path="/Dummy.txt" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370098877178" ignored="false" />
+    <file path="/Dummy.txt" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370099616163" ignored="false" />
     <file path="/DriverReader.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778559252" ignored="false" />
     <file path="$PROJECT_DIR$/../YoursTaxi/model/src/main/java/com/taxiservice/model/reader/DriverReader.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778590867" ignored="false" />
     <file path="/Team.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369809876061" ignored="false" />
@@ -194,7 +191,7 @@
       <file leaf-file-name="TeamRateEvaluatorImpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="51" selection-start="4005" selection-end="4005" vertical-scroll-proportion="0.20658135">
+            <state line="145" column="79" selection-start="4217" selection-end="4217" vertical-scroll-proportion="0.42413163">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#evaluateIndex#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
@@ -683,7 +680,11 @@
       <created>1370098885093</created>
       <updated>1370098885093</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix ++">
+      <created>1370099620825</created>
+      <updated>1370099620825</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -780,7 +781,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make Frame manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix ++" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -800,6 +801,7 @@
     <MESSAGE value="add idea files" />
     <MESSAGE value="Fix column in last frame" />
     <MESSAGE value="Make Frame manager" />
+    <MESSAGE value="Fix ++" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -921,7 +923,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="51" selection-start="4005" selection-end="4005" vertical-scroll-proportion="0.20658135">
+        <state line="145" column="79" selection-start="4217" selection-end="4217" vertical-scroll-proportion="0.42413163">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#evaluateIndex#0;class#TeamRateEvaluatorImpl#0" expanded="false" />
