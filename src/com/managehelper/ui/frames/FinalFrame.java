@@ -71,7 +71,7 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
                 );
 
                 for(int i = 0; i < table.getItemCount(); i ++){
-                    table.getItem(i).setText(4, String.valueOf(raiting[i]));
+                    table.getItem(i).setText(7, String.valueOf(raiting[i]));
                 }
             }
         };

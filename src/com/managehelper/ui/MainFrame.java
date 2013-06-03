@@ -13,7 +13,6 @@ public class MainFrame {
         try {
             final ApplicationContext context = new ApplicationContext();
             context.getManager().init(context);
-
         } catch (Exception e) {
             e.printStackTrace();
         }

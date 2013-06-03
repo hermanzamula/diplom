@@ -114,7 +114,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         double worst;
         double max = array[0][0];
         double min = array[0][0];
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             for (int j = 0; j < NumOfGroups; j++) {
                 if (array[j][i] < min) {
                     min = array[j][i];

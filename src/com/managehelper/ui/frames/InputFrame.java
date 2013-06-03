@@ -51,21 +51,21 @@ public class InputFrame implements ManageFrame<ApplicationContext> {
      */
     protected void createContents(final ApplicationContext context) {
         final Label groupNum = new Label(shell, SWT.NONE);
-        groupNum.setBounds(10, 45, 63, 15);
+        groupNum.setBounds(10, 45, 150, 15);
         groupNum.setText("Введите количество групп");
 
         groupNumText = new Text(shell, SWT.BORDER);
         groupNumText.setBounds(283, 42, 76, 21);
 
         Label participantNum = new Label(shell, SWT.NONE);
-        participantNum.setBounds(10, 92, 87, 15);
+        participantNum.setBounds(10, 92, 200, 15);
         participantNum.setText("Введите количество претендентов");
 
         participantNumText = new Text(shell, SWT.BORDER);
         participantNumText.setBounds(283, 89, 76, 21);
 
         Button btnContinue = new Button(shell, SWT.NONE);
-        btnContinue.setBounds(363, 226, 61, 25);
+        btnContinue.setBounds(340, 226, 80, 25);
         btnContinue.setText("Продолжить");
 
         btnContinue.addSelectionListener(new SelectionAdapter() {
