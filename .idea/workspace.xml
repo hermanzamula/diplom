@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="diplom:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db7a644-0405-430d-a115-6fa8e95205c5" name="Default" comment="Almost complete">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/swt-win32-3.0m8.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="DELETED" beforePath="C:\Users\Zamula\Documents\GitHub\diplom\.idea\libraries\swt.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Zamula\Documents\GitHub\diplom\diplom.eml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Zamula\Documents\GitHub\diplom\diplom.userlibraries" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java" afterPath="$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/ui/frames/InputFrame.java" afterPath="$PROJECT_DIR$/src/com/managehelper/ui/frames/InputFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/ui/MainFrame.java" afterPath="$PROJECT_DIR$/src/com/managehelper/ui/MainFrame.java" />
+    <list default="true" id="9db7a644-0405-430d-a115-6fa8e95205c5" name="Default" comment="Final">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java" afterPath="$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java" afterPath="$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diplom.iml" afterPath="$PROJECT_DIR$/diplom.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="diplom.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370246023265" ignored="false" />
+    <file path="/fragment.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370251004356" ignored="false" />
     <file path="$PROJECT_DIR$/../YoursTaxi/model/src/main/java/com/taxiservice/model/reader/AdditionalReader.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778377990" ignored="false" />
     <file path="/AdditionalReader.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369777376453" ignored="false" />
     <file path="$PROJECT_DIR$/../YoursTaxi/model-impl/src/main/java/com/taxiservice/model/reader/AdditionalReaderImpl.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778408400" ignored="false" />
@@ -31,21 +28,21 @@
     <file path="/main.js" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778015694" ignored="false" />
     <file path="/index.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370122479815" ignored="false" />
     <file path="$PROJECT_DIR$/../YoursTaxi/web/src/main/webapp/pages/index.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370122625274" ignored="false" />
-    <file path="/Dummy.txt" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370244209801" ignored="false" />
+    <file path="/Dummy.txt" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370250772382" ignored="false" />
     <file path="/DriverReader.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778559252" ignored="false" />
     <file path="$PROJECT_DIR$/../YoursTaxi/model/src/main/java/com/taxiservice/model/reader/DriverReader.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778590867" ignored="false" />
     <file path="/Team.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370103852147" ignored="false" />
     <file path="/TeamRateEvaluator.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370104607490" ignored="false" />
-    <file path="/TeamRateEvaluatorImpl.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370123950161" ignored="false" />
+    <file path="/TeamRateEvaluatorImpl.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370250511256" ignored="false" />
     <file path="/FinalFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370108670817" ignored="false" />
-    <file path="/TableFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370123838016" ignored="false" />
+    <file path="/TableFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370249905425" ignored="false" />
     <file path="/ApplicationContext.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370104323890" ignored="false" />
     <file path="/InputFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370108658146" ignored="false" />
     <file path="/MainFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370098715766" ignored="false" />
     <file path="/CloseListener.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370100382267" ignored="false" />
     <file path="/UiUtils.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369951890334" ignored="false" />
     <file path="/ManageFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370097963942" ignored="false" />
-    <file path="/a.dummy" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370016374257" ignored="false" />
+    <file path="/a.dummy" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370250116576" ignored="false" />
     <file path="/FrameManager.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370097993212" ignored="false" />
     <file path="$PROJECT_DIR$/../chorus/webapp/src/main/webapp/WEB-INF/resources/pages/experiment/list.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370016593231" ignored="false" />
     <file path="/list.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370012563580" ignored="false" />
@@ -75,7 +72,7 @@
     <file path="$PROJECT_DIR$/../YoursTaxi/web/src/main/webapp/pages/taxi-info.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370115939622" ignored="false" />
     <file path="/taxi-info.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370115939622" ignored="false" />
     <file path="/main.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370114796596" ignored="false" />
-    <file path="/*.regexp" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370122862551" ignored="false" />
+    <file path="/*.regexp" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370248311485" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,21 +140,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java" line="187" class="com.managehelper.ui.frames.TableFrame" package="com.managehelper.ui.frames">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
@@ -171,7 +153,7 @@
       <file leaf-file-name="TeamRateEvaluatorImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="59" selection-start="3226" selection-end="3226" vertical-scroll-proportion="0.0">
+            <state line="72" column="45" selection-start="2138" selection-end="2138" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,7 +163,9 @@
         <entry file="jar://C:/Program Files/Java/jdk1.6.0_41/src.zip!/java/lang/Math.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="302" column="25" selection-start="11872" selection-end="11872" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="e#0#59586#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -189,7 +173,7 @@
       <file leaf-file-name="TeamRateEvaluator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/TeamRateEvaluator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="15" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
+            <state line="10" column="9" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -213,10 +197,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FinalFrame.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FinalFrame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="31" selection-start="2525" selection-end="2525" vertical-scroll-proportion="0.128">
+            <state line="89" column="62" selection-start="3168" selection-end="3168" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -231,23 +215,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrameManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/FrameManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TableFrame.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TableFrame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="100" selection-start="7355" selection-end="7355" vertical-scroll-proportion="-5.52">
+            <state line="305" column="83" selection-start="11692" selection-end="11692" vertical-scroll-proportion="0.26344085">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#842#853#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationContext.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/ApplicationContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="24" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -291,9 +275,9 @@
         <option value="$PROJECT_DIR$/src/com/managehelper/model/Team.java" />
         <option value="$PROJECT_DIR$/src/com/managehelper/model/TeamRateEvaluator.java" />
         <option value="$PROJECT_DIR$/src/com/managehelper/model/ApplicationContext.java" />
-        <option value="$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java" />
         <option value="$PROJECT_DIR$/src/com/managehelper/ui/frames/InputFrame.java" />
         <option value="$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java" />
+        <option value="$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java" />
         <option value="$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java" />
       </list>
     </option>
@@ -506,13 +490,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/swt.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -780,7 +765,11 @@
       <created>1370108768576</created>
       <updated>1370108768576</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Final">
+      <created>1370246076051</created>
+      <updated>1370246076051</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -813,7 +802,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32828283" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6178451" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -826,8 +815,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2931818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23063973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2931818" sideWeight="0.76936024" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23063973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="432" y="305" width="501" height="280" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -877,7 +866,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Almost complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -900,6 +889,7 @@
     <MESSAGE value="Fix ++" />
     <MESSAGE value="Fix - set team in TeamRateEvaluator" />
     <MESSAGE value="Almost complete" />
+    <MESSAGE value="Final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -970,13 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/ApplicationContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="24" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/InputFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="41" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.0">
@@ -987,38 +970,47 @@
     <entry file="jar://C:/Program Files/Java/jdk1.6.0_41/src.zip!/java/lang/Math.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="302" column="25" selection-start="11872" selection-end="11872" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/TeamRateEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="15" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="59" selection-start="3226" selection-end="3226" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="100" selection-start="7355" selection-end="7355" vertical-scroll-proportion="-5.52">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#842#853#0" expanded="true" />
+            <element signature="e#0#59586#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="31" selection-start="2525" selection-end="2525" vertical-scroll-proportion="0.128">
+        <state line="89" column="62" selection-start="3168" selection-end="3168" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/TeamRateEvaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="9" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/ApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="24" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="45" selection-start="2138" selection-end="2138" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="305" column="83" selection-start="11692" selection-end="11692" vertical-scroll-proportion="0.26344085">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#842#853#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

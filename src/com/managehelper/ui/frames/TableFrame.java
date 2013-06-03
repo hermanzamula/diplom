@@ -235,8 +235,8 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
         index4.setText("Ms-: ");
 
         Label lblCosts = new Label(composite, SWT.NONE);
-        lblCosts.setBounds(21, 283, 150, 15);
-        lblCosts.setText("Цена обучения группы");
+        lblCosts.setBounds(21, 283, 170, 15);
+        lblCosts.setText("Стоимость обучения группы");
     }
 
     private Table createTable(int numberOfParticipants, ScrolledComposite scrolledHolder) {
@@ -256,7 +256,7 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
 
         TableColumn tableColumn = new TableColumn(table, SWT.NONE);
         tableColumn.setWidth(50);
-        tableColumn.setText("0");
+        tableColumn.setText("Участники");
 
         for (int j = 0; j < numberOfParticipants; j++) {
             TableColumn tableColumn1 = new TableColumn(table, SWT.NONE);
@@ -285,7 +285,15 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
                 for (int i = 1; i < board.getTable().getColumnCount(); i++) {
                     final String value = item.getText(i).trim();
                     //If value present, set value as marked
-                    ints[index][i - 1] = value.length() > 0 && !value.equals("-") && !value.equals("0") ? 1 : 0;
+                    if (value.length() > 0 && !value.equals("-") && !value.equals("0")) {
+                        ints[index][i - 1] = 1;
+                    }
+                    else if (value.length() > 0 && value.equals("-")) {
+                        ints[index][i - 1] = 0;
+                    }
+                    else if(value.length() == 0 || value.equals("0")) {
+                        ints[index][i - 1] = -1;
+                    }
 
                 }
                 index++;
