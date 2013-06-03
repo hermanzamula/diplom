@@ -3,6 +3,8 @@ package com.managehelper.model.impl;
 import com.managehelper.model.Team;
 import com.managehelper.model.TeamRateEvaluator;
 
+import java.util.Arrays;
+
 public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
     @Override
@@ -151,11 +153,15 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     }
 
     @Override
-    public double[] evaluateRating(double arrayBeforNormolize[][], int NumOfGroups) {
+    public double[] evaluateRating(double array[][], int NumOfGroups) {
         double massiv[] = new double[NumOfGroups];
+        for (double[] anArray : array) {
+            System.out.println(Arrays.toString(anArray));
+        }
+
         for (int i = 0; i < NumOfGroups; i++) {
             for (int j = 0; j < 5; j++) {
-                massiv[i] = massiv[i] + (1 - arrayBeforNormolize[i][j]);
+                massiv[i] = massiv[i] + (1 - array[i][j]);
             }
 
         }
