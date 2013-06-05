@@ -48,7 +48,7 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
         lblNewLabel.setText("Важность Критериев");
 
         Button btnEvalute = new Button(shell, SWT.NONE);
-        btnEvalute.setBounds(386, 363, 75, 25);
+        btnEvalute.setBounds(280, 363, 75, 25);
         btnEvalute.setText("Вычислить");
 
         btnEvalute.addSelectionListener(onEvaluatePress(context));
@@ -80,7 +80,7 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
     private void createCoefficientRateTable() {
 
         coefRate = new Table(shell, SWT.BORDER | SWT.FULL_SELECTION);
-        coefRate.setBounds(10, 339, 310, 50);
+        coefRate.setBounds(10, 339, 260, 50);
         coefRate.setHeaderVisible(true);
         coefRate.setLinesVisible(true);
 
@@ -89,8 +89,6 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
         createTableColumn(coefRate, "Ms+");
         createTableColumn(coefRate, "Ms-");
         createTableColumn(coefRate, "R");
-        createTableColumn(coefRate, "Q");
-
 
         TableItem tableItem = new TableItem(coefRate, SWT.NONE);
         tableItem.setText("");
@@ -121,7 +119,7 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
         columnDefault.setText("№ Группы");
 
         createTableColumn(table, "A", 100);
-        createTableColumn(table, "I (group)", 100);
+        createTableColumn(table, "I", 100);
         createTableColumn(table, "Ms+", 100);
         createTableColumn(table, "Ms-", 100);
         createTableColumn(table, "R", 100);
