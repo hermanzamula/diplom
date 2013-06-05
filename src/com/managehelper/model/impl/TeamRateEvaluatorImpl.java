@@ -148,8 +148,8 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
         double best;
         double worst;
-        double max = arrayO[0][0];
-        double min = arrayO[0][0];
+        double max;
+        double min;
         for (double[] anArrayO1 : arrayO) {
             for (int j = 0; j < arrayO.length; j++) {
                 if (j == (arrayO.length - 1)) {

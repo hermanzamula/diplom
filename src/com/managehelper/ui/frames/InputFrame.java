@@ -25,7 +25,7 @@ public class InputFrame implements ManageFrame<ApplicationContext> {
         }
         shell = new Shell();
         shell.setSize(450, 300);
-        shell.setText("");
+        shell.setText("Шаг 1: Ввод Групп и Участников");
         shell.setLayout(null);
         createContents(context);
 

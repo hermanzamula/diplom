@@ -44,8 +44,8 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
         createCoefficientRateTable();
 
         Label lblNewLabel = new Label(shell, SWT.NONE);
-        lblNewLabel.setBounds(10, 315, 105, 15);
-        lblNewLabel.setText("\u0412\u0435\u0441\u0430");
+        lblNewLabel.setBounds(10, 315, 150, 15);
+        lblNewLabel.setText("Важность Критериев");
 
         Button btnEvalute = new Button(shell, SWT.NONE);
         btnEvalute.setBounds(386, 363, 75, 25);
@@ -88,7 +88,7 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
         createTableColumn(coefRate, "I");
         createTableColumn(coefRate, "Ms+");
         createTableColumn(coefRate, "Ms-");
-        createTableColumn(coefRate, "C");
+        createTableColumn(coefRate, "R");
         createTableColumn(coefRate, "Q");
 
 
@@ -118,13 +118,13 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
     private void createColumns(Table table) {
         TableColumn columnDefault = new TableColumn(table, SWT.NONE);
         columnDefault.setWidth(100);
-        columnDefault.setText("Группа");
+        columnDefault.setText("№ Группы");
 
         createTableColumn(table, "A", 100);
         createTableColumn(table, "I (group)", 100);
         createTableColumn(table, "Ms+", 100);
         createTableColumn(table, "Ms-", 100);
-        createTableColumn(table, "C", 100);
+        createTableColumn(table, "R", 100);
         createTableColumn(table, "Q", 100);
         createTableColumn(table, "P", 100);
     }
@@ -144,7 +144,7 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
         }
         shell = new Shell();
         shell.setSize(860, 440);
-        shell.setText("");
+        shell.setText("Шаг 3: Вычисление Оценки");
 
         createContents(context);
 

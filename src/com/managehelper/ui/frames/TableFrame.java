@@ -75,7 +75,7 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
         }
         shell = new Shell();
         shell.setSize(600, 447);
-        shell.setText("");
+        shell.setText("Шаг 2: Ввод Данных");
         shell.setLayout(null);
 
         createContents(applicationContext);
@@ -256,7 +256,7 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
 
         TableColumn tableColumn = new TableColumn(table, SWT.NONE);
         tableColumn.setWidth(50);
-        tableColumn.setText("Участники");
+        tableColumn.setText("№ Участника");
 
         for (int j = 0; j < numberOfParticipants; j++) {
             TableColumn tableColumn1 = new TableColumn(table, SWT.NONE);
