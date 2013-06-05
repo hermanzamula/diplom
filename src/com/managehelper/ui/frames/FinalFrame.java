@@ -118,7 +118,7 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
     private void createColumns(Table table) {
         TableColumn columnDefault = new TableColumn(table, SWT.NONE);
         columnDefault.setWidth(100);
-        columnDefault.setText("");
+        columnDefault.setText("Группа");
 
         createTableColumn(table, "A", 100);
         createTableColumn(table, "I (group)", 100);

@@ -120,7 +120,7 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
             scrolledHolder.setExpandVertical(true);
 
             Text cost = new Text(composite, SWT.BORDER);
-            cost.setBounds(170, 282, 76, 21);
+            cost.setBounds(200, 282, 76, 21);
 
             final Table table = createTable(numberOfParticipants, scrolledHolder);
             final Team team = new Team();
@@ -185,7 +185,7 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
             array[i][4] = team.getCost();
         }
 
-        applicationContext.getEvaluator().normalize(array, true, applicationContext.getNumOfGroups());
+        applicationContext.getEvaluator().normalize(array, applicationContext.getNumOfGroups());
 
 
         final double[] rating = applicationContext.getEvaluator().evaluateRating(array, applicationContext.getNumOfGroups());

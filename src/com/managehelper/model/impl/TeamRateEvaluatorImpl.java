@@ -9,12 +9,23 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
     @Override
     public double evaluateIndex(int[][] array, Team team) {
-        int n = team.getParticipants();
+
+        double n = team.getParticipants();
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(j==(n-1)){
+                    System.out.print(array[i][j]+" "+"\n");
+                }
+                else{
+                    System.out.print(array[i][j]+" ");
+                }
+            }
+        }
         if (n == 0) {
             throw new IllegalArgumentException("Number of participants is null");
         }
 
-        int VP = 0;
+        double VP = 0;
         for (int i = 0; i < n - 1; i++) {
             for (int j = i + 1; j < n; j++) {
                 if ((array[i][j] == array[j][i]) && (array[i][j] == 1)) {
@@ -22,7 +33,10 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
                 }
             }
         }
-        final double v = VP / (double) n * ((double) n - 1.d);
+
+        final double v = VP / ( n * ( n - 1));
+        System.out.println(v);
+        System.out.println("________");
         team.setIndex(v);
         return v;
     }
@@ -30,43 +44,51 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     @Override
     public double evaluateGroupUnity(int[][] array, Team team) {
         int n = team.getParticipants();
+        double VO=0;
         if (n == 0) {
             throw new IllegalArgumentException("Number of participants is null");
         }
-
-        int VP = 0;
-        int VO = 0;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = i + 1; j < n; j++) {
-                if ((array[i][j] == array[j][i]) && (array[i][j] == 1)) {
-                    VP++;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if ((i==j)|(array[i][j])==-1) {
+                    continue;
                 }
-                if ((array[i][j] == array[j][i]) && (array[i][j] == 0)) {
+                else{
                     VO++;
                 }
             }
         }
-        final double v = (VP - VO) / (double) n * ((double) n - 1.d);
+
+        final double v = VO/n;
+        System.out.println(v);
+        System.out.println("________");
         team.setGroupUnity(v);
         return v;
     }
 
     @Override
-    public int evaluateMedianaPlus(int[][] array, Team team) {
-        int result = 0;
+    public double evaluateMedianaPlus(int[][] array, Team team) {
+        double result = 0;
         int n = team.getParticipants();
         if (n == 0) {
             throw new IllegalArgumentException("Number of participants is null");
         }
-        int massiv[] = new int[n];
+        double massiv[] = new double[n];
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (array[i][j] == 1) {
+                if (i==j)
+                    continue;
+                if(array[j][i]!=-1){
                     massiv[i]++;
                 }
-
             }
+
+        }
+
+
+        for (int i = 0; i < massiv.length; i++) {
+            massiv[i]= massiv[i]/ 5.d;
         }
         sort(massiv);
         if (n % 2 == 0) {
@@ -76,66 +98,99 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
             result = massiv[(massiv.length + 1) / 2];
 
         }
+        System.out.println(result);
+        System.out.println("________");
         team.setMedianaPlus(result);
         return result;
     }
 
     @Override
-    public int evaluateMedianaMinus(int[][] array, Team team) {
+    public double evaluateMedianaMinus(int[][] array, Team team) {
 
-        int resoult = 0;
+        double result = 0;
         int n = team.getParticipants();
         if (n == 0) {
             throw new IllegalArgumentException("Number of participants is null");
         }
-        int massiv[] = new int[n];
+        double massiv[] = new double[n];
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (i == j) continue;
-                if (array[i][j] == 0) {
+                if (i==j)
+                    continue;
+                if(array[i][j]!=-1){
                     massiv[i]++;
                 }
-
             }
+
+        }
+
+
+        for (int i = 0; i < massiv.length; i++) {
+            massiv[i]= massiv[i]/ 5.d;
         }
         sort(massiv);
         if (n % 2 == 0) {
-            resoult = massiv[(massiv.length / 2) + 1];
+            result = massiv[(massiv.length / 2) + 1];
 
         } else {
-            resoult = massiv[(massiv.length + 1) / 2];
+            result = massiv[(massiv.length + 1) / 2];
 
         }
-        team.setMedianaMinus(resoult);
-        return resoult;
+        System.out.println(result);
+        System.out.println("________");
+        team.setMedianaMinus(result);
+        return result;
     }
 
     @Override
-    public double[][] normalize(double array[][], boolean isMax, int NumOfGroups) {
+    public double[][] normalize(double arrayO[][], int NumOfGroups) {
+
         double best;
         double worst;
-        double max = array[0][0];
-        double min = array[0][0];
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < NumOfGroups; j++) {
-                if (array[j][i] < min) {
-                    min = array[j][i];
+        double max = arrayO[0][0];
+        double min = arrayO[0][0];
+        for (double[] anArrayO1 : arrayO) {
+            for (int j = 0; j < arrayO.length; j++) {
+                if (j == (arrayO.length - 1)) {
+                    System.out.print(anArrayO1[j] + " " + "\n");
+                } else {
+                    System.out.print(anArrayO1[j] + " ");
                 }
-                if (array[j][i] > max) {
-                    max = array[j][i];
+            }
+        }
+        System.out.print("_________________"+"\n");
+        for (int i = 0; i < 5; i++) {
+            min=arrayO[0][i];
+            max=arrayO[0][i];
+            for (int j = 0; j < NumOfGroups; j++) {
+                if (arrayO[j][i] < min) {
+                    min = arrayO[j][i];
+                }
+                if (arrayO[j][i] > max) {
+                    max = arrayO[j][i];
                 }
             }
             best = max;
             worst = min;
-            // тут нужно будет указать, best,worst под соответствующее условие;
+            System.out.println(max+" "+min+"\n");
 
 
             for (int j = 0; j < NumOfGroups; j++) {
-                array[j][i] = norm(best, worst, array[j][i]);
+                arrayO[j][i] = Math.rint(100.0 *norm(best, worst, arrayO[j][i])) / 100.0;
+            }
+
+        }
+        for (double[] anArrayO : arrayO) {
+            for (int j = 0; j < arrayO.length; j++) {
+                if (j == (arrayO.length - 1)) {
+                    System.out.print(anArrayO[j] + " " + "\n");
+                } else {
+                    System.out.print(anArrayO[j] + " ");
+                }
             }
         }
-        return array;
+        return arrayO;
     }
 
     @Override
@@ -153,15 +208,16 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     }
 
     @Override
-    public double[] evaluateRating(double array[][], int NumOfGroups) {
+    public double[] evaluateRating(double arrayO[][], int NumOfGroups) {
         double massiv[] = new double[NumOfGroups];
-        for (double[] anArray : array) {
-            System.out.println(Arrays.toString(anArray));
+        for (double[] anArrayO : arrayO) {
+            for (int j = 0; j < arrayO.length; j++) {
+                System.out.println(arrayO);
+            }
         }
-
         for (int i = 0; i < NumOfGroups; i++) {
             for (int j = 0; j < 5; j++) {
-                massiv[i] = massiv[i] + (1 - array[i][j]);
+                massiv[i] = massiv[i] + (1 - arrayO[i][j]);
             }
 
         }
@@ -171,8 +227,8 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         return massiv;
     }
 
-    private void sort(int[] mass) {
-        int tempo;
+    private void sort(double[] mass) {
+        double tempo;
         for (int i = 0; i < mass.length - 1; i++) {
             for (int j = i + 1; j < mass.length; j++) {
                 if (mass[i] > mass[j]) {
