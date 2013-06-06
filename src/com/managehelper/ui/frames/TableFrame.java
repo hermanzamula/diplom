@@ -175,7 +175,7 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
     }
 
     private void evaluateRaiting(ApplicationContext applicationContext) {
-        final double array[][] = new double[tables.size()][6];
+        final double array[][] = new double[tables.size()][5];
         for (int i = 0; i < tables.size(); i++) {
             final Team team = tables.get(i).getTeam();
             array[i][0] = team.getIndex();
@@ -189,10 +189,6 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
 
 
         final double[] rating = applicationContext.getEvaluator().evaluateRating(array, applicationContext.getNumOfGroups());
-
-        for(int i = 0; i < array.length; i ++){
-            array[i][5] = rating[i];
-        }
 
         applicationContext.setNormalized(array);
         for (int i = 0; i < rating.length; i++){
@@ -212,8 +208,8 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
 
             board.getIndex1Value().setText("" + index);
             board.getIndex2Value().setText("" + unity);
-            board.getIndex3Value().setText("" + plus);
-            board.getIndex4Value().setText("" + minus);
+            board.getIndex3Value().setText("" + minus);
+            board.getIndex4Value().setText("" + plus);
         }
     }
 
