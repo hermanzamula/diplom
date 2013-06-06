@@ -185,10 +185,9 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
             array[i][4] = team.getCost();
         }
 
-        applicationContext.getEvaluator().normalize(array, applicationContext.getNumOfGroups());
-
-
         final double[] rating = applicationContext.getEvaluator().evaluateRating(array, applicationContext.getNumOfGroups());
+
+        applicationContext.getEvaluator().normalize(array, applicationContext.getNumOfGroups());
 
         applicationContext.setNormalized(array);
         for (int i = 0; i < rating.length; i++){

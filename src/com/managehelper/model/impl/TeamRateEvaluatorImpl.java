@@ -11,13 +11,12 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     public double evaluateIndex(int[][] array, Team team) {
 
         double n = team.getParticipants();
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                if(j==(n-1)){
-                    System.out.print(array[i][j]+" "+"\n");
-                }
-                else{
-                    System.out.print(array[i][j]+" ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (j == (n - 1)) {
+                    System.out.print(array[i][j] + " " + "\n");
+                } else {
+                    System.out.print(array[i][j] + " ");
                 }
             }
         }
@@ -34,7 +33,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
             }
         }
 
-        final double v = VP / ( n * ( n - 1));
+        final double v = VP / (n * (n - 1));
         System.out.println(v);
         System.out.println("________");
         team.setIndex(v);
@@ -44,22 +43,21 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     @Override
     public double evaluateGroupUnity(int[][] array, Team team) {
         int n = team.getParticipants();
-        double VO=0;
+        double VO = 0;
         if (n == 0) {
             throw new IllegalArgumentException("Number of participants is null");
         }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if ((i==j)|(array[i][j])==-1) {
+                if ((i == j) | (array[i][j]) == -1) {
                     continue;
-                }
-                else{
+                } else {
                     VO++;
                 }
             }
         }
 
-        final double v = VO/n;
+        final double v = VO / n;
         System.out.println(v);
         System.out.println("________");
         team.setGroupUnity(v);
@@ -77,9 +75,9 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (i==j)
+                if (i == j)
                     continue;
-                if(array[j][i]!=-1){
+                if (array[j][i] != -1) {
                     massiv[i]++;
                 }
             }
@@ -88,7 +86,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
 
         for (int i = 0; i < massiv.length; i++) {
-            massiv[i]= massiv[i]/ 5.d;
+            massiv[i] = massiv[i] / 5.d;
         }
         sort(massiv);
         if (n % 2 == 0) {
@@ -116,9 +114,9 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (i==j)
+                if (i == j)
                     continue;
-                if(array[i][j]!=-1){
+                if (array[i][j] != -1) {
                     massiv[i]++;
                 }
             }
@@ -127,7 +125,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
 
         for (int i = 0; i < massiv.length; i++) {
-            massiv[i]= massiv[i]/ 5.d;
+            massiv[i] = massiv[i] / 5.d;
         }
         sort(massiv);
         if (n % 2 == 0) {
@@ -159,10 +157,10 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
                 }
             }
         }
-        System.out.print("_________________"+"\n");
+        System.out.print("_________________" + "\n");
         for (int i = 0; i < 5; i++) {
-            min=arrayO[0][i];
-            max=arrayO[0][i];
+            min = arrayO[0][i];
+            max = arrayO[0][i];
             for (int j = 0; j < NumOfGroups; j++) {
                 if (arrayO[j][i] < min) {
                     min = arrayO[j][i];
@@ -173,11 +171,15 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
             }
             best = max;
             worst = min;
-            System.out.println(max+" "+min+"\n");
+            System.out.println(max + " " + min + "\n");
 
 
             for (int j = 0; j < NumOfGroups; j++) {
-                arrayO[j][i] = Math.rint(100.0 *norm(best, worst, arrayO[j][i])) / 100.0;
+                if (best == worst) {
+                    arrayO[j][i] = 1;
+                    continue;
+                }
+                arrayO[j][i] = Math.rint(100.0 * norm(best, worst, arrayO[j][i])) / 100.0;
             }
 
         }
@@ -195,10 +197,10 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
     @Override
     public double[] evaluateTeamRate(int NumOfGroups, double arrayAfterNormolize[][], double weights[]) {
-        double kof = 0;
+        double kof;
         double massiv[] = new double[NumOfGroups];
         for (int i = 0; i < NumOfGroups; i++) {
-            for (int j = 0; j < 6; j++) {
+            for (int j = 0; j < 5; j++) {
                 kof = weights[j];
                 massiv[i] = massiv[i] + (kof * arrayAfterNormolize[i][j]);
             }
@@ -210,10 +212,26 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     @Override
     public double[] evaluateRating(double arrayO[][], int NumOfGroups) {
         double massiv[] = new double[NumOfGroups];
+        double max;
         for (double[] anArrayO : arrayO) {
-            for (int j = 0; j < arrayO.length; j++) {
-                System.out.println(arrayO);
+            System.out.println(Arrays.toString(anArrayO));
+
+        }
+        for (int i = 0; i < NumOfGroups; i++) {
+            max = arrayO[i][0];
+            for (int j = 0; j < 5; j++) {
+                if (max < arrayO[i][j]) {
+                    max = arrayO[i][j];
+                }
             }
+
+
+        for (int j = 0; j < 5; j++) {
+             if(max==0){
+               throw new IllegalStateException("Максимальный элемент столбца равен нулю");
+             }
+            arrayO[i][j] = arrayO[i][j] / max;
+        }
         }
         for (int i = 0; i < NumOfGroups; i++) {
             for (int j = 0; j < 5; j++) {

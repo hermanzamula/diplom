@@ -25,21 +25,41 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
      */
     protected void createContents(final ApplicationContext context) {
 
-        ScrolledComposite scrolledComposite = new ScrolledComposite(shell, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
-        scrolledComposite.setBounds(10, 10, 830, 300);
-        scrolledComposite.setExpandHorizontal(true);
-        scrolledComposite.setExpandVertical(true);
+        Composite scrolledComposite = new Composite(shell, SWT.NONE);
+        scrolledComposite.setBounds(0, 0, 830, 300);
+        /*scrolledComposite.setExpandHorizontal(true);
+        scrolledComposite.setExpandVertical(true);*/
 
-        table = new Table(scrolledComposite, SWT.BORDER | SWT.FULL_SELECTION);
+        TabFolder tabFolder = new TabFolder(scrolledComposite, SWT.NONE);
+        tabFolder.setBounds(0, 0, 830, 300);
+
+        TabItem tabItem = new TabItem(tabFolder, SWT.NONE);
+        tabItem.setText("Ненормализованные");
+
+        table = new Table(tabFolder, SWT.BORDER | SWT.FULL_SELECTION);
+        tabItem.setControl(table);
         table.setHeaderVisible(true);
         table.setLinesVisible(true);
 
         createColumns(table);
         createGroupsLine(table, context.getNumOfGroups(), context);
 
+        TabItem noNorm = new TabItem(tabFolder, SWT.NONE);
+        noNorm.setText("Нормализованные");
 
+        Table noNormTable = new Table(tabFolder, SWT.BORDER | SWT.FULL_SELECTION);
+        noNorm.setControl(noNormTable);
+        noNormTable.setHeaderVisible(true);
+        noNormTable.setLinesVisible(true);
+
+        createNormTable(noNormTable);
+        createNormGroupsLine(noNormTable, context.getNumOfGroups(), context);
+
+
+
+/*
         scrolledComposite.setContent(table);
-        scrolledComposite.setMinSize(table.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+        scrolledComposite.setMinSize(table.computeSize(SWT.DEFAULT, SWT.DEFAULT));*/
 
         createCoefficientRateTable();
 
@@ -52,6 +72,18 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
         btnEvalute.setText("Вычислить");
 
         btnEvalute.addSelectionListener(onEvaluatePress(context));
+    }
+
+    private void createNormGroupsLine(Table noNormTable, int numOfGroups, ApplicationContext context) {
+        for (int i = 0; i < numOfGroups; i++) {
+            TableItem tableItem = new TableItem(noNormTable, SWT.NONE);
+            tableItem.setText("" + (i + 1));
+            tableItem.setText(1, "" + context.getNormalized()[i][0]);
+            tableItem.setText(2, "" + context.getNormalized()[i][1]);
+            tableItem.setText(3, "" + context.getNormalized()[i][2]);
+            tableItem.setText(4, "" + context.getNormalized()[i][3]);
+            tableItem.setText(5, "" + context.getNormalized()[i][4]);
+        }
     }
 
     private SelectionAdapter onEvaluatePress(final ApplicationContext context) {
@@ -111,6 +143,18 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
             tableItem.setText(5, "" + context.getTeams().get(i).getCost());
             tableItem.setText(6, "" + context.getTeams().get(i).getRating());
         }
+    }
+
+    private void createNormTable(Table normTable){
+        TableColumn columnDefault = new TableColumn(normTable, SWT.NONE);
+        columnDefault.setWidth(100);
+        columnDefault.setText("№ Группы");
+
+        createTableColumn(normTable, "A", 100);
+        createTableColumn(normTable, "I", 100);
+        createTableColumn(normTable, "Ms+", 100);
+        createTableColumn(normTable, "Ms-", 100);
+        createTableColumn(normTable, "R", 100);
     }
 
     private void createColumns(Table table) {
