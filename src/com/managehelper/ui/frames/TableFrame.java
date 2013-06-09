@@ -13,6 +13,7 @@ import org.eclipse.swt.events.*;
 import org.eclipse.swt.widgets.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static com.managehelper.ui.UiUtils.addSelectionListener;
@@ -301,7 +302,7 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
 
     private void setAllValues(int numberOfParticipants) {
         for (TeamBoard board : tables) {
-            int index = board.getTable().getTopIndex();
+            int index = 0;
             final int[][] ints = new int[numberOfParticipants][numberOfParticipants];
             while (index < board.getTable().getItemCount()) {
                 final TableItem item = board.getTable().getItem(index);
@@ -426,7 +427,7 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
         }
 
         private void setBoardValues(int[][] boardValues) {
-            this.boardValues = boardValues;
+            this.boardValues =  boardValues;
         }
 
         @Deprecated
