@@ -93,7 +93,12 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
                 final TableItem item = coefRate.getItem(0);
                 for (int i = 0; i < coefRate.getColumnCount(); i++) {
                     final String text = item.getText(i).trim();
-                    context.getWeights()[i] = valueOf(text.isEmpty() ? "0" : text);
+                    try{
+                        final Double value = valueOf(text.isEmpty() ? "0" : text);
+                        context.getWeights()[i] = value;
+                    } catch (NumberFormatException NaN){
+                        context.getWeights()[i] = 0;
+                    }
                 }
 
                 final double[] raiting = context.getEvaluator().evaluateTeamRate(

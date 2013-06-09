@@ -134,7 +134,7 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
 
         }
 
-        setDiagonalValues();
+        setDiagonalValues(applicationContext);
 
         scrolledComposite.setContent(tabFolder);
         scrolledComposite.setMinSize(tabFolder.computeSize(SWT.DEFAULT, SWT.DEFAULT));
@@ -255,20 +255,48 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
 
         for (int j = 0; j < numberOfParticipants; j++) {
             TableColumn tableColumn1 = new TableColumn(table, SWT.NONE);
-            tableColumn.setResizable(true);
+            tableColumn1.setResizable(true);
             tableColumn1.setWidth(50);
             tableColumn1.setText("" + (j + 1));
         }
+
+
 
         for (int j = 0; j < numberOfParticipants; j++) {
             TableItem tableItem = new TableItem(table, SWT.NONE);
             tableItem.setText("" + (j + 1));
         }
 
+
         scrolledHolder.setContent(table);
         scrolledHolder.setMinSize(table.computeSize(SWT.DEFAULT, SWT.DEFAULT));
         setCustomHeight(table, 50);
         return table;
+    }
+
+    private void createAdditionalFields(Table table) {
+
+        TableColumn tableColumn1 = new TableColumn(table, SWT.NONE);
+        tableColumn1.setResizable(true);
+        tableColumn1.setWidth(25);
+        tableColumn1.setText("");
+        final TableColumn tableColumn2 = new TableColumn(table, SWT.NONE);
+        tableColumn2.setWidth(50);
+        tableColumn2.setText("+");
+        final TableColumn tableColumn3 = new TableColumn(table, SWT.NONE);
+        tableColumn3.setWidth(50);
+        tableColumn3.setText("-");
+        final TableColumn tableColumn4 = new TableColumn(table, SWT.NONE);
+        tableColumn4.setWidth(50);
+        tableColumn4.setText("Всего");
+        TableItem tableItem = new TableItem(table, SWT.NONE);
+        tableItem.setText("");
+        TableItem tableItem1 = new TableItem(table, SWT.NONE);
+        tableItem1.setText("+");
+        TableItem tableItem2 = new TableItem(table, SWT.NONE);
+        tableItem2.setText("-");
+        TableItem tableItem3 = new TableItem(table, SWT.NONE);
+        tableItem3.setText("Всего");
     }
 
     private void setAllValues(int numberOfParticipants) {
@@ -299,11 +327,11 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
         }
     }
 
-    private void setDiagonalValues() {
+    private void setDiagonalValues(ApplicationContext context) {
         for (TeamBoard board : tables) {
             int index = 0;
-            while (index < board.getTable().getItemCount()) {
-                for (int i = 0; i < board.getTable().getColumnCount(); i++) {
+            while (index < context.getNumOfParticipants()) {
+                for (int i = 0; i < context.getNumOfParticipants(); i++) {
                     if (i == index) {
                         final TableItem item = board.getTable().getItem(index);
                         item.setText(i + 1, "0");

@@ -227,10 +227,10 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
 
 
         for (int j = 0; j < 5; j++) {
-             if(max==0){
+          /*   if(max==0){
                throw new IllegalStateException("Максимальный элемент столбца равен нулю");
-             }
-            arrayO[i][j] = arrayO[i][j] / max;
+             }*/
+            arrayO[i][j] = arrayO[i][j] / (max == 0?1:max);
         }
         }
         for (int i = 0; i < NumOfGroups; i++) {
