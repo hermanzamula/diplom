@@ -215,20 +215,20 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
 
     private void createInfoLables(Composite composite) {
         Label index1 = new Label(composite, SWT.NONE);
-        index1.setBounds(386, 10, 55, 15);
-        index1.setText("A: ");
+        index1.setBounds(386, 10, 120, 30);
+        index1.setText("Индекс групповой" +"\n"+"сплоченности: ");
 
         Label index2 = new Label(composite, SWT.NONE);
-        index2.setBounds(386, 75, 55, 15);
-        index2.setText("I (group): ");
+        index2.setBounds(386, 70, 120, 30);
+        index2.setText("Индекс групповой"+ "\n"+"экспанисвности: ");
 
         Label index3 = new Label(composite, SWT.NONE);
-        index3.setBounds(447, 10, 55, 15);
-        index3.setText("Ms+: ");
+        index3.setBounds(386, 130,120, 30);
+        index3.setText("Индекс социометрического"+ "\n"+"статуса: ");
 
         Label index4 = new Label(composite, SWT.NONE);
-        index4.setBounds(447, 75, 55, 15);
-        index4.setText("Ms-: ");
+        index4.setBounds(386, 190,120, 30);
+        index4.setText("Индекс эмоциональной"+"\n"+ "экспансивности: ");
 
         Label lblCosts = new Label(composite, SWT.NONE);
         lblCosts.setBounds(21, 283, 170, 15);
@@ -346,7 +346,7 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
 
     private void createBoardLables(final TeamBoard board, Composite composite) {
         Label index1Value = new Label(composite, SWT.NONE);
-        index1Value.setBounds(386, 41, 55, 15);
+        index1Value.setBounds(386, 50, 55, 15);
         index1Value.setText("");
         board.setIndex1Value(index1Value);
 
@@ -356,12 +356,12 @@ public class TableFrame implements ManageFrame<ApplicationContext> {
         board.setIndex2Value(index2Value);
 
         Label index3Value = new Label(composite, SWT.NONE);
-        index3Value.setBounds(447, 41, 55, 15);
+        index3Value.setBounds(386, 162, 55, 15);
         index3Value.setText("");
         board.setIndex3Value(index3Value);
 
         Label index4Value = new Label(composite, SWT.NONE);
-        index4Value.setBounds(447, 106, 55, 15);
+        index4Value.setBounds(386, 218, 55, 15);
         index4Value.setText("");
         board.setIndex4Value(index4Value);
     }

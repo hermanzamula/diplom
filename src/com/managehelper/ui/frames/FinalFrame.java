@@ -9,6 +9,8 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.*;
 
+import javax.swing.*;
+
 import static com.managehelper.ui.UiUtils.addEditableListeners;
 import static java.lang.Double.valueOf;
 
@@ -67,9 +69,32 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
         lblNewLabel.setBounds(10, 315, 150, 15);
         lblNewLabel.setText("Важность Критериев");
 
+        Label lbl = new Label(shell, SWT.NONE);
+        lbl.setBounds(450, 315, 330, 15);
+        lbl.setText(" I - Индекс групповой сплоченности");
+
+        Label lb2 = new Label(shell, SWT.NONE);
+        lb2.setBounds(450, 335, 330, 15);
+        lb2.setText(" Eg - Индекс групповой экспанисвности");
+
+        Label lb3 = new Label(shell, SWT.NONE);
+        lb3.setBounds(450, 355, 330, 15);
+        lb3.setText(" Cj - Индекс социометрического статуса");
+
+        Label lb4 = new Label(shell, SWT.NONE);
+        lb4.setBounds(450, 375, 330, 15);
+        lb4.setText(" Ej - Индекс эмоциональной экспансивности");
+
+        Label lb5 = new Label(shell, SWT.NONE);
+        lb5.setBounds(450, 395, 330, 15);
+        lb5.setText(" R - Стоимость обучения группы");
+
+
         Button btnEvalute = new Button(shell, SWT.NONE);
         btnEvalute.setBounds(280, 363, 75, 25);
         btnEvalute.setText("Вычислить");
+
+
 
         btnEvalute.addSelectionListener(onEvaluatePress(context));
     }
@@ -121,11 +146,11 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
         coefRate.setHeaderVisible(true);
         coefRate.setLinesVisible(true);
 
-        createTableColumn(coefRate, "A");
-        createTableColumn(coefRate, "I");
-        createTableColumn(coefRate, "Ms+");
-        createTableColumn(coefRate, "Ms-");
-        createTableColumn(coefRate, "R");
+        createTableColumn(coefRate, "I: ");
+        createTableColumn(coefRate, "Eg: ");
+        createTableColumn(coefRate, "Cj: ");
+        createTableColumn(coefRate, "Ej: ");
+        createTableColumn(coefRate, "R: ");
 
         TableItem tableItem = new TableItem(coefRate, SWT.NONE);
         tableItem.setText("");
@@ -155,11 +180,11 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
         columnDefault.setWidth(100);
         columnDefault.setText("№ Группы");
 
-        createTableColumn(normTable, "A", 100);
-        createTableColumn(normTable, "I", 100);
-        createTableColumn(normTable, "Ms+", 100);
-        createTableColumn(normTable, "Ms-", 100);
-        createTableColumn(normTable, "R", 100);
+        createTableColumn(normTable, "I :", 100);
+        createTableColumn(normTable, "Eg :", 100);
+        createTableColumn(normTable, "Cj :", 100);
+        createTableColumn(normTable, "Ej :", 100);
+        createTableColumn(normTable, "R :", 100);
     }
 
     private void createColumns(Table table) {
@@ -167,13 +192,13 @@ public class FinalFrame implements ManageFrame<ApplicationContext> {
         columnDefault.setWidth(100);
         columnDefault.setText("№ Группы");
 
-        createTableColumn(table, "A", 100);
-        createTableColumn(table, "I", 100);
-        createTableColumn(table, "Ms+", 100);
-        createTableColumn(table, "Ms-", 100);
-        createTableColumn(table, "R", 100);
-        createTableColumn(table, "Q", 100);
-        createTableColumn(table, "P", 100);
+        createTableColumn(table, "I : ", 100);
+        createTableColumn(table, "Eg : ", 100);
+        createTableColumn(table, "Cj : ", 100);
+        createTableColumn(table, "Ej : ", 100);
+        createTableColumn(table, "R :", 100);
+        createTableColumn(table, "Рейтинг", 100);
+        createTableColumn(table, "Общая оценка", 100);
     }
 
     private void createTableColumn(Table table, String name, int i) {

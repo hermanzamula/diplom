@@ -6,8 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db7a644-0405-430d-a115-6fa8e95205c5" name="Default" comment="">
+    <list default="true" id="9db7a644-0405-430d-a115-6fa8e95205c5" name="Default" comment="Add runnable">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java" afterPath="$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java" afterPath="$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java" afterPath="$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diplom.iml" afterPath="$PROJECT_DIR$/diplom.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -28,13 +31,13 @@
     <file path="/main.js" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778015694" ignored="false" />
     <file path="/index.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370122479815" ignored="false" />
     <file path="$PROJECT_DIR$/../YoursTaxi/web/src/main/webapp/pages/index.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370122625274" ignored="false" />
-    <file path="/Dummy.txt" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370789236449" ignored="false" />
+    <file path="/Dummy.txt" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370896813412" ignored="false" />
     <file path="/DriverReader.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778559252" ignored="false" />
     <file path="$PROJECT_DIR$/../YoursTaxi/model/src/main/java/com/taxiservice/model/reader/DriverReader.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1369778590867" ignored="false" />
     <file path="/Team.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370103852147" ignored="false" />
     <file path="/TeamRateEvaluator.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370104607490" ignored="false" />
-    <file path="/TeamRateEvaluatorImpl.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370786525192" ignored="false" />
-    <file path="/FinalFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370786772547" ignored="false" />
+    <file path="/TeamRateEvaluatorImpl.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370855404671" ignored="false" />
+    <file path="/FinalFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370859323881" ignored="false" />
     <file path="/TableFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370811975055" ignored="false" />
     <file path="/ApplicationContext.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370104323890" ignored="false" />
     <file path="/InputFrame.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370108658146" ignored="false" />
@@ -74,6 +77,8 @@
     <file path="/main.html" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370811459163" ignored="false" />
     <file path="/*.regexp" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370248311485" ignored="false" />
     <file path="/EvaluateTeamRateTest.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370502339003" ignored="false" />
+    <file path="$PROJECT_DIR$/../../12/src/er.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370824462439" ignored="false" />
+    <file path="/er.java" changelist="9db7a644-0405-430d-a115-6fa8e95205c5" time="1370824367242" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +94,7 @@
   </component>
   <component name="DebuggerManager">
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -125,7 +131,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -138,7 +143,7 @@
       <file leaf-file-name="TeamRateEvaluatorImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="229" column="12" selection-start="6519" selection-end="6643" vertical-scroll-proportion="0.0">
+            <state line="19" column="39" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,9 +153,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/CloseListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="25" column="20" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,7 +161,7 @@
       <file leaf-file-name="InputFrame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/InputFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="35" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
+            <state line="23" column="66" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,7 +197,7 @@
       <file leaf-file-name="TableFrame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="307" column="58" selection-start="11782" selection-end="11782" vertical-scroll-proportion="0.39594844">
+            <state line="242" column="70" selection-start="9497" selection-end="9497" vertical-scroll-proportion="0.46084338">
               <folding />
             </state>
           </provider>
@@ -203,25 +206,7 @@
       <file leaf-file-name="FinalFrame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="52" selection-start="3759" selection-end="3759" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Double.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_45/src.zip!/java/lang/Double.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="474" column="49" selection-start="19786" selection-end="19786" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FloatingDecimal.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_45/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="43" selection-start="3599" selection-end="3599" vertical-scroll-proportion="0.0">
+            <state line="198" column="36" selection-start="7381" selection-end="7381" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -235,6 +220,13 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="hermanzamula" />
+        <option value="hermanzamula@gmail.com" />
+        <option value="sergienkojavadev@gmail.com" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
@@ -259,16 +251,14 @@
         <option value="$PROJECT_DIR$/src/com/managehelper/ui/frames/InputFrame.java" />
         <option value="$PROJECT_DIR$/test/com/managehelper/test/EvaluateTeamRateTest.java" />
         <option value="$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java" />
         <option value="$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java" />
+        <option value="$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1010" />
+    <option name="width" value="1250" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -306,6 +296,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -314,10 +305,6 @@
               <option name="myItemId" value="diplom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -326,138 +313,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managehelper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managehelper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frames" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managehelper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managehelper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diplom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -599,6 +480,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -625,19 +519,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -838,34 +719,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
+    <frame x="0" y="0" width="1250" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282353" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29058823" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29012346" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31924883" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31751227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2828201" sideWeight="0.70941174" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26262626" sideWeight="0.6824877" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30441898" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="432" y="305" width="501" height="280" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733223" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -948,11 +829,30 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/UiUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/ManageFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="27" selection-start="4818" selection-end="4818" vertical-scroll-proportion="0.0">
+        <state line="5" column="19" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="307" column="58" selection-start="11782" selection-end="11782" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="52" selection-start="3759" selection-end="3759" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/UiUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="27" selection-start="4818" selection-end="4818" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/ApplicationContext.java">
@@ -960,11 +860,6 @@
         <state line="60" column="23" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_41/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4110" column="25" selection-start="164316" selection-end="164316" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/Team.java">
@@ -976,21 +871,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/FrameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="17" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/TeamRateEvaluator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="13" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/MainFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/InputFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="27" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+        <state line="23" column="66" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -998,6 +889,13 @@
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/ManageFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="19" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="198" column="36" selection-start="7381" selection-end="7381" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1011,35 +909,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/model/impl/TeamRateEvaluatorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="12" selection-start="6519" selection-end="6643" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_45/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="43" selection-start="3599" selection-end="3599" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/FinalFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="52" selection-start="3759" selection-end="3759" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_45/src.zip!/java/lang/Double.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="474" column="49" selection-start="19786" selection-end="19786" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/InputFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
+        <state line="19" column="39" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1047,15 +917,20 @@
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/CloseListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="20" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="27" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managehelper/ui/frames/TableFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="307" column="58" selection-start="11782" selection-end="11782" vertical-scroll-proportion="0.39594844">
+        <state line="242" column="70" selection-start="9497" selection-end="9497" vertical-scroll-proportion="0.46084338">
           <folding />
         </state>
       </provider>
@@ -1102,7 +977,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1119,7 +994,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

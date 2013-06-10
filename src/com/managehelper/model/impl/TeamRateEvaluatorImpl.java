@@ -11,15 +11,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     public double evaluateIndex(int[][] array, Team team) {
 
         double n = team.getParticipants();
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (j == (n - 1)) {
-                    System.out.print(array[i][j] + " " + "\n");
-                } else {
-                    System.out.print(array[i][j] + " ");
-                }
-            }
-        }
+
         if (n == 0) {
             throw new IllegalArgumentException("Number of participants is null");
         }
@@ -34,8 +26,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         }
 
         final double v = VP / (n * (n - 1));
-        System.out.println(v);
-        System.out.println("________");
+
         team.setIndex(v);
         return v;
     }
@@ -58,8 +49,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         }
 
         final double v = VO / n;
-        System.out.println(v);
-        System.out.println("________");
+
         team.setGroupUnity(v);
         return v;
     }
@@ -96,8 +86,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
             result = massiv[(massiv.length + 1) / 2];
 
         }
-        System.out.println(result);
-        System.out.println("________");
+
         team.setMedianaPlus(result);
         return result;
     }
@@ -135,8 +124,7 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
             result = massiv[(massiv.length + 1) / 2];
 
         }
-        System.out.println(result);
-        System.out.println("________");
+
         team.setMedianaMinus(result);
         return result;
     }
@@ -148,12 +136,12 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
         double worst;
         double max;
         double min;
-        for (double[] anArrayO1 : arrayO) {
+        for (int i=0;i< arrayO.length;i++) {
             for (int j = 0; j < arrayO.length; j++) {
                 if (j == (arrayO.length - 1)) {
-                    System.out.print(anArrayO1[j] + " " + "\n");
+                    System.out.print(arrayO[i][j] + " " + "\n");
                 } else {
-                    System.out.print(anArrayO1[j] + " ");
+                    System.out.print(arrayO[i][j] + " ");
                 }
             }
         }
@@ -169,8 +157,14 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
                     max = arrayO[j][i];
                 }
             }
+            if(i==4){
+                best=min;
+                worst=max;
+            }
+            else{
             best = max;
             worst = min;
+            }
             System.out.println(max + " " + min + "\n");
 
 
@@ -212,30 +206,31 @@ public class TeamRateEvaluatorImpl implements TeamRateEvaluator {
     @Override
     public double[] evaluateRating(double arrayO[][], int NumOfGroups) {
         double massiv[] = new double[NumOfGroups];
+        double resultmassiv [][] = new double [NumOfGroups][5];
         double max;
         for (double[] anArrayO : arrayO) {
             System.out.println(Arrays.toString(anArrayO));
 
         }
-        for (int i = 0; i < NumOfGroups; i++) {
-            max = arrayO[i][0];
-            for (int j = 0; j < 5; j++) {
-                if (max < arrayO[i][j]) {
-                    max = arrayO[i][j];
+        for (int i = 0; i < 5; i++) {
+            max = arrayO[0][i];
+            for (int j = 0; j < NumOfGroups; j++) {
+                if (max < arrayO[j][i]) {
+                    max = arrayO[j][i];
                 }
             }
 
 
-        for (int j = 0; j < 5; j++) {
+        for (int j = 0; j < NumOfGroups; j++) {
           /*   if(max==0){
                throw new IllegalStateException("Максимальный элемент столбца равен нулю");
              }*/
-            arrayO[i][j] = arrayO[i][j] / (max == 0?1:max);
+            resultmassiv[j][i] = arrayO[j][i] / (max == 0?1:max);
         }
         }
         for (int i = 0; i < NumOfGroups; i++) {
             for (int j = 0; j < 5; j++) {
-                massiv[i] = massiv[i] + (1 - arrayO[i][j]);
+                massiv[i] = massiv[i] + (1 - resultmassiv[i][j]);
             }
 
         }
